@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./img/quoteBG.jpg);
+  background-color: #000;
+  color: #fff;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  .app-main {
+    position: relative;
+    flex: 70%;
+  }
+  .app-calc {
+    flex: 30%;
+  }
+}
