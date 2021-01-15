@@ -1,4 +1,5 @@
 import React from "react";
+import Q5SellingProducts from "../Q5SellingProducts/Q5SellingProducts";
 // Styles
 import "./NeedBranding.scss";
 
@@ -9,7 +10,11 @@ const NeedBranding = ({ q2, setQ2, totalPrice, setTotalPrice }) => {
 
   // get what the client clicks on
   let q2HandleClick = (e) => {
-    setQ2(e.target.innerText);
+    if (e.target.innerText === "YES, I NEED BRANDING") {
+      setQ2("YES, I NEED BRANDING");
+    } else {
+      setQ2("NO, I HAVE MY OWN BRANDING");
+    }
   };
 
   // hide current section if answer is chosen
@@ -19,7 +24,7 @@ const NeedBranding = ({ q2, setQ2, totalPrice, setTotalPrice }) => {
     };
   }
 
-  if (q2 == "YES, I NEED BRANDING") {
+  if (q2) {
     setTotalPrice(0 + 750);
   }
 
