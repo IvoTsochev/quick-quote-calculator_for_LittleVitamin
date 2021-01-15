@@ -1,24 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // Styles
 import "./LetsStart.scss";
 
 const LetsStart = ({ q1Visible, setQ1Visible }) => {
-  let sectionStyle = {
-    display: "block",
-  };
-
-  if (!q1Visible) {
-    sectionStyle = {
-      display: "none",
-    };
-  }
-
-  let q1HandleClick = () => {
-    setQ1Visible(false);
-  };
-
   return (
-    <div className="lets-start" style={sectionStyle}>
+    <div className="lets-start">
       <h2>AN ESTIMATE FOR YOUR NEW WEBSITE?</h2>
       <p>
         We are Wordpress and Shopify experts. Our understanding of both design
@@ -27,7 +14,9 @@ const LetsStart = ({ q1Visible, setQ1Visible }) => {
         are for your guide only, please speak to a member of our team for an
         accurate quote based on your requirements.
       </p>
-      <button onClick={q1HandleClick}>Let's Start</button>
+      <Link to="/need-branding">
+        <button>Let's Start</button>
+      </Link>
     </div>
   );
 };

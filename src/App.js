@@ -1,5 +1,6 @@
 import "./App.scss";
 import { useState } from "react";
+import { Route, Switch } from "react-router-dom";
 // Components
 import Q1LetsStart from "./components/Q1LetsStart/Q1LetsStart";
 import Q2NeedBranding from "./components/Q2NeedBranding/Q2NeedBranding";
@@ -12,65 +13,36 @@ function App() {
   // total price
   const [totalPrice, setTotalPrice] = useState(0);
   // questions
-  const [q1Visible, setQ1Visible] = useState(true);
-  const [q2, setQ2] = useState("");
-  const [q3, setQ3] = useState("");
-  const [q4, setQ4] = useState("");
-
-  console.log(totalPrice);
-
-  // Q2 check the answer and render component based on the answer
-  let businessCardsOrSellingProducts = () => {
-    if (q2 === "YES, I NEED BRANDING") {
-      return (
-        <Q3NeedBusCards
-          q3={q3}
-          setQ3={setQ3}
-          totalPrice={totalPrice}
-          setTotalPrice={setTotalPrice}
-        />
-      );
-    } else if (q2 === "NO, I HAVE MY OWN BRANDING") {
-      return <Q5SellingProducts />;
-    }
-  };
 
   return (
     <div className="app">
       <div className="app-main">
-        {/* question 1 */}
-        <Q1LetsStart q1Visible={q1Visible} setQ1Visible={setQ1Visible} />
+        <Switch>
+          <Route path="/" exact>
+            <Q1LetsStart />
+          </Route>
 
-        {/* question 2 */}
-        {!q1Visible ? (
-          <Q2NeedBranding
-            q2={q2}
-            setQ2={setQ2}
-            totalPrice={totalPrice}
-            setTotalPrice={setTotalPrice}
-          />
-        ) : (
-          ""
-        )}
+          <Route path="/need-branding">
+            <Q2NeedBranding />
+          </Route>
 
-        {/* question 3 */}
-        {businessCardsOrSellingProducts()}
+          <Route path="/need-business-cards">
+            <Q3NeedBusCards />
+          </Route>
 
-        {/* question 4 */}
-        {q3 ? (
-          <Q4NeedGuidelines
-            q4={q4}
-            setQ4={setQ4}
-            totalPrice={totalPrice}
-            setTotalPrice={setTotalPrice}
-          />
-        ) : (
-          ""
-        )}
+          <Route path="/need-guidelines">
+            <Q4NeedGuidelines />
+          </Route>
 
-        {q4 ? <Q5SellingProducts /> : ""}
+          <Route path="/selling-products">
+            <Q5SellingProducts />
+          </Route>
+        </Switch>
       </div>
-      <div className="app-calc"></div>
+      <div className="app-calc">
+        <p>Estimated Total</p>
+        <p>{totalPrice}</p>
+      </div>
     </div>
   );
 }
