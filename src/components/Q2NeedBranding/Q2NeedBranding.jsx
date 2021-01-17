@@ -1,9 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // Styles
-import "./NeedBranding.scss";
+import "./Q2NeedBranding.scss";
 
-const NeedBranding = ({ q2, setQ2, totalPrice, setTotalPrice }) => {
+const NeedBranding = ({ storePrices, setStorePrices }) => {
+  let handleNeedBrandingClick = (e) => {
+    let btnText = e.target.innerText;
+    if (btnText === "YES, I NEED BRANDING") {
+      setStorePrices({ ...storePrices, NeedBranding: "750" });
+    } else if (btnText === "NO, I HAVE MY OWN BRANDING") {
+      setStorePrices({ ...storePrices, NeedBranding: "0" });
+    }
+  };
+
   return (
     <div className="need-branding">
       <h2>Do you need branding?</h2>
@@ -14,11 +23,13 @@ const NeedBranding = ({ q2, setQ2, totalPrice, setTotalPrice }) => {
         aim to create a visual identity that is recognisable
       </p>
       <Link to="/need-business-cards">
-        <button>YES, I NEED BRANDING</button>
+        <button onClick={handleNeedBrandingClick}>YES, I NEED BRANDING</button>
       </Link>
 
       <Link to="/selling-products">
-        <button>NO, I HAVE MY OWN BRANDING</button>
+        <button onClick={handleNeedBrandingClick}>
+          NO, I HAVE MY OWN BRANDING
+        </button>
       </Link>
     </div>
   );

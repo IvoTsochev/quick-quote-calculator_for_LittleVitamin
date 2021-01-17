@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // Styles
-import "./LetsStart.scss";
+import "./Q1LetsStart.scss";
 
-const LetsStart = ({ q1Visible, setQ1Visible }) => {
+const LetsStart = () => {
   return (
     <div className="lets-start">
       <h2>AN ESTIMATE FOR YOUR NEW WEBSITE?</h2>
