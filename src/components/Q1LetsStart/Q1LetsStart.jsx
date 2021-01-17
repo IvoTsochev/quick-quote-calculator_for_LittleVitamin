@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 // Styles
 import "./Q1LetsStart.scss";
+import { Button, QuestionTitle } from "../../globalStyling";
 
 const LetsStart = () => {
   return (
     <div className="lets-start">
-      <h2>AN ESTIMATE FOR YOUR NEW WEBSITE?</h2>
+      <QuestionTitle>An estimate for Your new Website?</QuestionTitle>
       <p>
         We are Wordpress and Shopify experts. Our understanding of both design
         and website development comes from years of experience working with a
@@ -15,7 +16,7 @@ const LetsStart = () => {
         accurate quote based on your requirements.
       </p>
       <Link to="/need-branding">
-        <button>Let's Start</button>
+        <Button>Let's Start</Button>
       </Link>
     </div>
   );

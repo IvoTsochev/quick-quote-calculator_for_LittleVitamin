@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Styles
 import "./Q6ManyProducts.scss";
+import { Button, QuestionTitle } from "../../globalStyling";
 
 const ManyProducts = ({ storePrices, setStorePrices }) => {
   let handleManyProductsClick = (e) => {
@@ -16,11 +18,11 @@ const ManyProducts = ({ storePrices, setStorePrices }) => {
 
   return (
     <div className="many-products">
-      <h2>HOW MANY PRODUCTS WILL YOU BE SELLING?</h2>
+      <QuestionTitle>How many products will you be selling?</QuestionTitle>
       <Link>
-        <button onClick={handleManyProductsClick}>1-5</button>
-        <button onClick={handleManyProductsClick}>6-11</button>
-        <button onClick={handleManyProductsClick}>12+</button>
+        <Button onClick={handleManyProductsClick}>1-5</Button>
+        <Button onClick={handleManyProductsClick}>6-11</Button>
+        <Button onClick={handleManyProductsClick}>12+</Button>
       </Link>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Styles
+import { Button, QuestionTitle } from "../../globalStyling";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
   let handleNeedBusCardsClick = (e) => {
@@ -13,11 +15,11 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
 
   return (
     <div className="need-bus-cards">
-      <h1>NEED BUSINESS CARDS?</h1>
+      <QuestionTitle>Need Business Cards?</QuestionTitle>
       <Link to="/need-guidelines">
-        <button onClick={handleNeedBusCardsClick}>YES</button>
+        <Button onClick={handleNeedBusCardsClick}>YES</Button>
 
-        <button onClick={handleNeedBusCardsClick}>NO</button>
+        <Button onClick={handleNeedBusCardsClick}>NO</Button>
       </Link>
     </div>
   );

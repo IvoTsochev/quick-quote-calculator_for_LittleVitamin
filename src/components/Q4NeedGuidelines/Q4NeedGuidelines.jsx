@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Styles
 import "./Q4NeedGuidelines.scss";
+import { Button, QuestionTitle } from "../../globalStyling";
 
 const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
   let handleNeedGuidelinesClick = (e) => {
@@ -14,11 +16,11 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
 
   return (
     <div className="need-guidelines">
-      <h2>DO YOU NEED A BRAND GUIDELINES DOC.?</h2>
+      <QuestionTitle>Do you need a brand guidelines doc.?</QuestionTitle>
       <Link to="/selling-products">
-        <button onClick={handleNeedGuidelinesClick}>YES</button>
+        <Button onClick={handleNeedGuidelinesClick}>YES</Button>
 
-        <button onClick={handleNeedGuidelinesClick}>NO</button>
+        <Button onClick={handleNeedGuidelinesClick}>NO</Button>
       </Link>
     </div>
   );

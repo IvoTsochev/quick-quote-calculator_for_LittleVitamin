@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // Styles
 import "./Q5SellingProducts.scss";
+import { Button, QuestionTitle } from "../../globalStyling";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
   let handleSellingProductsClick = (e) => {
@@ -15,13 +16,15 @@ const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
 
   return (
     <div className="selling-products">
-      <h2>WILL YOUR NEW WEBSITE BE SELLING PRODUCTS ONLINE?</h2>
+      <QuestionTitle>
+        Will your new website be selling products online?
+      </QuestionTitle>
       <Link to="/many-products">
-        <button onClick={handleSellingProductsClick}>YES</button>
+        <Button onClick={handleSellingProductsClick}>YES</Button>
       </Link>
 
       <Link to="/many-pages">
-        <button onClick={handleSellingProductsClick}>NO</button>
+        <Button onClick={handleSellingProductsClick}>NO</Button>
       </Link>
     </div>
   );
