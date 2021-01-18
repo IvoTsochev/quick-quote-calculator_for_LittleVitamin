@@ -3,11 +3,20 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q1LetsStart.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation, buttonAnimation } from "../../animation";
 
 const LetsStart = () => {
   return (
-    <div className="lets-start">
-      <QuestionTitle>An estimate for Your new Website?</QuestionTitle>
+    <motion.div
+      className="lets-start"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <QuestionTitle>An estimate for your new website?</QuestionTitle>
       <p>
         We are Wordpress and Shopify experts. Our understanding of both design
         and website development comes from years of experience working with a
@@ -18,7 +27,7 @@ const LetsStart = () => {
       <Link to="/need-branding">
         <Button>Let's Start</Button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

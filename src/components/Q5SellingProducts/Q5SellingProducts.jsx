@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q5SellingProducts.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../animation";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
   let handleSellingProductsClick = (e) => {
@@ -15,10 +18,22 @@ const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
   };
 
   return (
-    <div className="selling-products">
+    <motion.div
+      className="selling-products"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <QuestionTitle>
         Will your new website be selling products online?
       </QuestionTitle>
+      <p>
+        eCommerce is becoming more and more popular as retailers bring their
+        products & stores online. Little Vitamin are Shopify Experts and our
+        eCommerce packages offer a full range of options for your online store,
+        making full use of the intuitive Shopify platform.
+      </p>
       <Link to="/many-products">
         <Button onClick={handleSellingProductsClick}>YES</Button>
       </Link>
@@ -26,7 +41,7 @@ const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
       <Link to="/many-pages">
         <Button onClick={handleSellingProductsClick}>NO</Button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

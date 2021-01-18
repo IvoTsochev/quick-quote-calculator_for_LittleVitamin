@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 // Styles
 import { Button, QuestionTitle } from "../../globalStyling";
+import "./Q3NeedBusCards.scss";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../animation";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
   let handleNeedBusCardsClick = (e) => {
@@ -14,14 +18,22 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
   };
 
   return (
-    <div className="need-bus-cards">
-      <QuestionTitle>Need Business Cards?</QuestionTitle>
+    <motion.div
+      className="need-bus-cards"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <QuestionTitle>
+        Do you need branded business cards and email signatures?
+      </QuestionTitle>
       <Link to="/need-guidelines">
         <Button onClick={handleNeedBusCardsClick}>YES</Button>
 
         <Button onClick={handleNeedBusCardsClick}>NO</Button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

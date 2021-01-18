@@ -22,3 +22,14 @@ body {
     flex: 30%;
   }
 }
+
+@media (max-width: 500px) {
+  .app {
+    .app-main {
+      flex: 100%;
+    }
+    .app-calc {
+      flex: 0%;
+    }
+  }
+}

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q4NeedGuidelines.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../animation";
 
 const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
   let handleNeedGuidelinesClick = (e) => {
@@ -15,14 +18,20 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
   };
 
   return (
-    <div className="need-guidelines">
+    <motion.div
+      className="need-guidelines"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <QuestionTitle>Do you need a brand guidelines doc.?</QuestionTitle>
       <Link to="/selling-products">
         <Button onClick={handleNeedGuidelinesClick}>YES</Button>
 
         <Button onClick={handleNeedGuidelinesClick}>NO</Button>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

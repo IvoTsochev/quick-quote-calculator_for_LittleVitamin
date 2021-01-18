@@ -1,36 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // Styles
-import "./Q6ManyPages.scss";
+import "./Q72AdditionalFunc.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 
-const Q6ManyPages = () => {
+const Q72AdditionalFunc = () => {
   return (
     <motion.div
-      className="many-pages"
+      className="q72-additional-func"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
     >
       <QuestionTitle>
-        How many pages/sections will your website have?
+        Are there any additional functionalities you are interested in?
       </QuestionTitle>
       <p>
-        Common pages include Homepage, About us, Our Services, Contact us etc.
-        The content can also be arranged into different sections on a single
-        page layout.
+        Functionality is it's interaction between the site and the site visitor,
+        features to enhance your website.
       </p>
-      <Link to="/q72additional-func">
-        <Button>1-5</Button>
-        <Button>6-11</Button>
-        <Button>12+</Button>
+      <Link to="/contacts-and-details">
+        <Button>Continue</Button>
       </Link>
     </motion.div>
   );
 };
 
-export default Q6ManyPages;
+export default Q72AdditionalFunc;
