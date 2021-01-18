@@ -1,14 +1,20 @@
 import React from "react";
 // Styles
 import "./Q8ContactsAndDetails.scss";
-import { Button, QuestionTitle } from "../../globalStyling";
+import { QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 
 const Q8ContactAndDetails = () => {
   return (
-    <motion.div className="contacts-and-details">
+    <motion.div
+      className="contacts-and-details"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <form className="contact-form">
         <QuestionTitle>
           Help us to provide you with a more accurate estimate.

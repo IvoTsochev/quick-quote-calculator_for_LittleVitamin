@@ -11,9 +11,9 @@ const NeedBranding = ({ storePrices, setStorePrices }) => {
   let handleNeedBrandingClick = (e) => {
     let btnText = e.target.innerText;
     if (btnText === "YES, I NEED BRANDING") {
-      setStorePrices({ ...storePrices, NeedBranding: "750" });
+      setStorePrices({ ...storePrices, NeedBranding: 750 });
     } else if (btnText === "NO, I HAVE MY OWN BRANDING") {
-      setStorePrices({ ...storePrices, NeedBranding: "0" });
+      setStorePrices({ ...storePrices, NeedBranding: 0 });
     }
   };
 

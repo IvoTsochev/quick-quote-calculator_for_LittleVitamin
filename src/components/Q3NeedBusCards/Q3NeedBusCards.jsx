@@ -11,9 +11,9 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
   let handleNeedBusCardsClick = (e) => {
     let btnText = e.target.innerText;
     if (btnText === "YES") {
-      setStorePrices({ ...storePrices, NeedBusCards: "750" });
+      setStorePrices({ ...storePrices, NeedBusCards: 750 });
     } else if (btnText === "NO") {
-      setStorePrices({ ...storePrices, NeedBusCards: "0" });
+      setStorePrices({ ...storePrices, NeedBusCards: 0 });
     }
   };
 

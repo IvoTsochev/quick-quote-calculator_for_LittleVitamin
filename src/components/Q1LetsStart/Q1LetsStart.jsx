@@ -5,7 +5,7 @@ import "./Q1LetsStart.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnimation, buttonAnimation } from "../../animation";
+import { pageAnimation } from "../../animation";
 
 const LetsStart = () => {
   return (
