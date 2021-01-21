@@ -17,6 +17,12 @@ body {
   .app-main {
     position: relative;
     flex: 70%;
+    .goBack-btn {
+      position: absolute;
+      bottom: 15%;
+      left: 25%;
+      padding: 1rem;
+    }
   }
   .app-calc {
     flex: 30%;

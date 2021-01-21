@@ -4,6 +4,8 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import "./App.scss";
 // Animation
 import { AnimatePresence } from "framer-motion";
+import { pageAnimation } from "./animation";
+
 // Components
 import Q1LetsStart from "./components/Q1LetsStart/Q1LetsStart";
 import Q2NeedBranding from "./components/Q2NeedBranding/Q2NeedBranding";
@@ -28,6 +30,12 @@ function App() {
     SellingProducts: 0,
     ManyProducts: 0,
   });
+
+  let goBackHandler = () => {
+    window.history.back();
+    pageAnimation.exit.y = "-150%";
+    pageAnimation.hidden.y = "150%%";
+  };
 
   return (
     <div className="app">
@@ -90,6 +98,9 @@ function App() {
             </Route>
           </Switch>
         </AnimatePresence>
+        <button className="goBack-btn" onClick={goBackHandler}>
+          Go Back
+        </button>
       </div>
       <div className="app-calc"></div>
     </div>
