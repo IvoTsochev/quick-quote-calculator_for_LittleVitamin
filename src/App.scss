@@ -17,15 +17,35 @@ body {
   .app-main {
     position: relative;
     flex: 70%;
-    .goBack-btn {
-      position: absolute;
-      bottom: 15%;
-      left: 25%;
-      padding: 1rem;
-    }
   }
   .app-calc {
     flex: 30%;
+    .goBack-btn-arrow {
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    .goForward-btn-arrow {
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    .app-calc-stats {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 

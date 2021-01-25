@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 // Styles
 import "./App.scss";
+import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animation
 import { AnimatePresence } from "framer-motion";
 import { pageAnimation } from "./animation";
@@ -17,6 +19,7 @@ import Q6ManyPages from "./components/Q6-2-ManyPages/Q6ManyPages";
 import Q71AdditionalFunc from "./components/Q7-1-AdditionalFunc/Q71AdditionalFunc";
 import Q72AdditionalFunc from "./components/Q7-2-AdditionalFunc/Q72AdditionalFunc";
 import Q8ContactAndDetails from "./components/Q8ContactsAndDetails/Q8ContactAndDetails";
+import Quote from "./components/Quote/Quote";
 
 function App() {
   let location = useLocation();
@@ -33,6 +36,12 @@ function App() {
 
   let goBackHandler = () => {
     window.history.back();
+    pageAnimation.exit.y = "150%";
+    pageAnimation.hidden.y = "-150%";
+  };
+
+  let goForwardHandler = () => {
+    window.history.forward();
     pageAnimation.exit.y = "-150%";
     pageAnimation.hidden.y = "150%";
   };
@@ -98,11 +107,23 @@ function App() {
             </Route>
           </Switch>
         </AnimatePresence>
-        <button className="goBack-btn" onClick={goBackHandler}>
-          Go Back
-        </button>
       </div>
-      <div className="app-calc"></div>
+      <div className="app-calc">
+        <FontAwesomeIcon
+          onClick={goBackHandler}
+          className="goBack-btn-arrow"
+          icon={faArrowUp}
+        />
+        <FontAwesomeIcon
+          onClick={goForwardHandler}
+          className="goForward-btn-arrow"
+          icon={faArrowDown}
+        />
+
+        <div className="app-calc-stats">
+          <Quote />
+        </div>
+      </div>
     </div>
   );
 }

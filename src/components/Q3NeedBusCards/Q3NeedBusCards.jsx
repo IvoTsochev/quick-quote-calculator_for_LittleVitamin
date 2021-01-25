@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 // Styles
 import { Button, QuestionTitle } from "../../globalStyling";
 import "./Q3NeedBusCards.scss";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime } from "../../util";
+import { forwardAnime, getPriceHandler } from "../../util";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
   return (
@@ -21,9 +25,14 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
         Do you need branded business cards and email signatures?
       </QuestionTitle>
       <Link to="/need-guidelines">
-        <Button onClick={forwardAnime}>YES</Button>
+        <Button value="750" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          YES
+        </Button>
 
-        <Button onClick={forwardAnime}>NO</Button>
+        <Button value="0" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
+        </Button>
       </Link>
     </motion.div>
   );

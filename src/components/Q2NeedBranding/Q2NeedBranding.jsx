@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q2NeedBranding.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime } from "../../util";
+import { forwardAnime, getPriceHandler } from "../../util";
 
 const NeedBranding = ({ storePrices, setStorePrices }) => {
   return (
@@ -25,11 +29,29 @@ const NeedBranding = ({ storePrices, setStorePrices }) => {
         to create a visual identity that is recognisable.
       </p>
       <Link to="/need-business-cards">
-        <Button onClick={forwardAnime}>YES, I NEED BRANDING</Button>
+        <Button
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+          value="750"
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />
+          YES, I NEED BRANDING
+        </Button>
       </Link>
 
       <Link to="/selling-products">
-        <Button onClick={forwardAnime}>NO, I HAVE MY OWN BRANDING</Button>
+        <Button
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+          value="0"
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faCircle} />
+          NO, I HAVE MY OWN BRANDING
+        </Button>
       </Link>
     </motion.div>
   );

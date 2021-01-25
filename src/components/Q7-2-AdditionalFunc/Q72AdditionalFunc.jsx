@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q72AdditionalFunc.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime } from "../../util";
+import { forwardAnime, getPriceHandler } from "../../util";
 
 const Q72AdditionalFunc = () => {
   let clickFunc = (e) => {
@@ -31,70 +33,57 @@ const Q72AdditionalFunc = () => {
       <div className="many-pages-add">
         <ul className="ks-cboxtags">
           <li onClick={clickFunc}>
-            <input type="checkbox" id="checkboxOne" value="Photo gallery" />
+            <input type="checkbox" id="checkboxOne" value="130" />
             <label htmlFor="checkboxOne">Photo gallery +£130</label>
           </li>
           <li>
-            <input
-              type="checkbox"
-              id="checkboxTwo"
-              value="Newsletter sign-up"
-            />
+            <input type="checkbox" id="checkboxTwo" value="195" />
             <label htmlFor="checkboxTwo">Newsletter sign-up +£195</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxThree" value="Video content" />
+            <input type="checkbox" id="checkboxThree" value="130" />
             <label htmlFor="checkboxThree">Video content £130</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxFour" value="Age gate" />
+            <input type="checkbox" id="checkboxFour" value="195" />
             <label htmlFor="checkboxFour">Age gate +£195</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxFive" value="File sharing" />
+            <input type="checkbox" id="checkboxFive" value="480" />
             <label htmlFor="checkboxFive">File sharing +£480</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxSix" value="Booking schedule" />
+            <input type="checkbox" id="checkboxSix" value="480" />
             <label htmlFor="checkboxSix">Booking schedule +£480</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxSeven" value="Contact form" />
+            <input type="checkbox" id="checkboxSeven" value="130" />
             <label htmlFor="checkboxSeven">Contact form +£130</label>
           </li>
           <li>
-            <input
-              type="checkbox"
-              id="checkboxEight"
-              value="Social media feed"
-            />
+            <input type="checkbox" id="checkboxEight" value="130" />
             <label htmlFor="checkboxEight">Social media feed +£130</label>
           </li>
           <li>
-            <input
-              type="checkbox"
-              id="checkboxNine"
-              value="Live support chat"
-            />
+            <input type="checkbox" id="checkboxNine" value="130" />
             <label htmlFor="checkboxNine">Live support chat +£130</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxTen" value="Event calendar" />
+            <input type="checkbox" id="checkboxTen" value="480" />
             <label htmlFor="checkboxTen">Event calendar +£480</label>
           </li>
           <li className="ks-selected">
-            <input
-              type="checkbox"
-              id="checkboxEleven"
-              value="Branded Google Map"
-            />
+            <input type="checkbox" id="checkboxEleven" value="130" />
             <label htmlFor="checkboxEleven">Branded Google Map +£130</label>
           </li>
         </ul>
       </div>
 
       <Link to="/contacts-and-details">
-        <Button onClick={forwardAnime}>Continue</Button>
+        <Button onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Continue
+        </Button>
       </Link>
     </motion.div>
   );

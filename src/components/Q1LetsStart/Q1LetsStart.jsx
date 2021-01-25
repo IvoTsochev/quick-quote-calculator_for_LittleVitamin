@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q1LetsStart.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
@@ -26,7 +29,10 @@ const LetsStart = () => {
         accurate quote based on your requirements.
       </p>
       <Link to="/need-branding">
-        <Button onClick={forwardAnime}>Let's Start</Button>
+        <Button onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Let's Start
+        </Button>
       </Link>
     </motion.div>
   );

@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q5SellingProducts.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime } from "../../util";
+import { forwardAnime, getPriceHandler } from "../../util";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
   return (
@@ -27,11 +31,16 @@ const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
         making full use of the intuitive Shopify platform.
       </p>
       <Link to="/many-products">
-        <Button onClick={forwardAnime}>YES</Button>
+        <Button value="3500" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          YES
+        </Button>
       </Link>
 
       <Link to="/many-pages">
-        <Button onClick={forwardAnime}>NO</Button>
+        <Button value="2500" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
+        </Button>
       </Link>
     </motion.div>
   );

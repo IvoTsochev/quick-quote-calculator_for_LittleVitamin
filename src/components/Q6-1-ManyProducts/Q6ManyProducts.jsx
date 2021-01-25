@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 // Styles
 import "./Q6ManyProducts.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime } from "../../util";
+import { forwardAnime, getPriceHandler } from "../../util";
 
 const ManyProducts = ({ storePrices, setStorePrices }) => {
   return (
@@ -23,9 +25,18 @@ const ManyProducts = ({ storePrices, setStorePrices }) => {
         project.
       </p>
       <Link to="/q71additional-func">
-        <Button onClick={forwardAnime}>0-20</Button>
-        <Button onClick={forwardAnime}>21-100</Button>
-        <Button onClick={forwardAnime}>100+</Button>
+        <Button value="0" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          0-20
+        </Button>
+        <Button value="2500" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          21-100
+        </Button>
+        <Button value="6500" onClick={forwardAnime}>
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          100+
+        </Button>
       </Link>
     </motion.div>
   );
