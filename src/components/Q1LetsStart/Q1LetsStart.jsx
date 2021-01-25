@@ -6,6 +6,7 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const LetsStart = () => {
   return (
@@ -25,7 +26,7 @@ const LetsStart = () => {
         accurate quote based on your requirements.
       </p>
       <Link to="/need-branding">
-        <Button>Let's Start</Button>
+        <Button onClick={forwardAnime}>Let's Start</Button>
       </Link>
     </motion.div>
   );

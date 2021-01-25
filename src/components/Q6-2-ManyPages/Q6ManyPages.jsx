@@ -6,6 +6,7 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const Q6ManyPages = () => {
   return (
@@ -25,9 +26,9 @@ const Q6ManyPages = () => {
         page layout.
       </p>
       <Link to="/q72additional-func">
-        <Button>1-5</Button>
-        <Button>6-11</Button>
-        <Button>12+</Button>
+        <Button onClick={forwardAnime}>1-5</Button>
+        <Button onClick={forwardAnime}>6-11</Button>
+        <Button onClick={forwardAnime}>12+</Button>
       </Link>
     </motion.div>
   );

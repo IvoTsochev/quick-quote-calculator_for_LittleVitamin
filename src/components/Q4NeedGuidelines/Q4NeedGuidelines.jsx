@@ -6,17 +6,9 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
-  let handleNeedGuidelinesClick = (e) => {
-    let btnText = e.target.innerText;
-    if (btnText === "YES") {
-      setStorePrices({ ...storePrices, NeedGuidelines: "1000" });
-    } else if (btnText === "NO") {
-      setStorePrices({ ...storePrices, NeedGuidelines: "0" });
-    }
-  };
-
   return (
     <motion.div
       className="need-guidelines"
@@ -27,9 +19,9 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
     >
       <QuestionTitle>Do you need a brand guidelines doc.?</QuestionTitle>
       <Link to="/selling-products">
-        <Button onClick={handleNeedGuidelinesClick}>YES</Button>
+        <Button onClick={forwardAnime}>YES</Button>
 
-        <Button onClick={handleNeedGuidelinesClick}>NO</Button>
+        <Button onClick={forwardAnime}>NO</Button>
       </Link>
     </motion.div>
   );

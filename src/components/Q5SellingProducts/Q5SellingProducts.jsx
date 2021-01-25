@@ -6,17 +6,9 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
-  let handleSellingProductsClick = (e) => {
-    let btnText = e.target.innerText;
-    if (btnText === "YES") {
-      setStorePrices({ ...storePrices, SellingProducts: "3500" });
-    } else if (btnText === "NO") {
-      setStorePrices({ ...storePrices, SellingProducts: "2500" });
-    }
-  };
-
   return (
     <motion.div
       className="selling-products"
@@ -35,11 +27,11 @@ const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
         making full use of the intuitive Shopify platform.
       </p>
       <Link to="/many-products">
-        <Button onClick={handleSellingProductsClick}>YES</Button>
+        <Button onClick={forwardAnime}>YES</Button>
       </Link>
 
       <Link to="/many-pages">
-        <Button onClick={handleSellingProductsClick}>NO</Button>
+        <Button onClick={forwardAnime}>NO</Button>
       </Link>
     </motion.div>
   );

@@ -6,17 +6,9 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const NeedBranding = ({ storePrices, setStorePrices }) => {
-  let handleNeedBrandingClick = (e) => {
-    let btnText = e.target.innerText;
-    if (btnText === "YES, I NEED BRANDING") {
-      setStorePrices({ ...storePrices, NeedBranding: 750 });
-    } else if (btnText === "NO, I HAVE MY OWN BRANDING") {
-      setStorePrices({ ...storePrices, NeedBranding: 0 });
-    }
-  };
-
   return (
     <motion.div
       className="need-branding"
@@ -33,13 +25,11 @@ const NeedBranding = ({ storePrices, setStorePrices }) => {
         to create a visual identity that is recognisable.
       </p>
       <Link to="/need-business-cards">
-        <Button onClick={handleNeedBrandingClick}>YES, I NEED BRANDING</Button>
+        <Button onClick={forwardAnime}>YES, I NEED BRANDING</Button>
       </Link>
 
       <Link to="/selling-products">
-        <Button onClick={handleNeedBrandingClick}>
-          NO, I HAVE MY OWN BRANDING
-        </Button>
+        <Button onClick={forwardAnime}>NO, I HAVE MY OWN BRANDING</Button>
       </Link>
     </motion.div>
   );

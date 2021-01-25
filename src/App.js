@@ -34,7 +34,7 @@ function App() {
   let goBackHandler = () => {
     window.history.back();
     pageAnimation.exit.y = "-150%";
-    pageAnimation.hidden.y = "150%%";
+    pageAnimation.hidden.y = "150%";
   };
 
   return (

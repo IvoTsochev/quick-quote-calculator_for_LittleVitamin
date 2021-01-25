@@ -6,19 +6,9 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const ManyProducts = ({ storePrices, setStorePrices }) => {
-  let handleManyProductsClick = (e) => {
-    let btnText = e.target.innerText;
-    if (btnText === "1-5") {
-      setStorePrices({ ...storePrices, ManyProducts: "0" });
-    } else if (btnText === "6-11") {
-      setStorePrices({ ...storePrices, ManyProducts: "2500" });
-    } else if (btnText === "12+") {
-      setStorePrices({ ...storePrices, ManyProducts: "3000" });
-    }
-  };
-
   return (
     <motion.div
       className="many-products"
@@ -33,9 +23,9 @@ const ManyProducts = ({ storePrices, setStorePrices }) => {
         project.
       </p>
       <Link to="/q71additional-func">
-        <Button onClick={handleManyProductsClick}>0-20</Button>
-        <Button onClick={handleManyProductsClick}>21-100</Button>
-        <Button onClick={handleManyProductsClick}>100+</Button>
+        <Button onClick={forwardAnime}>0-20</Button>
+        <Button onClick={forwardAnime}>21-100</Button>
+        <Button onClick={forwardAnime}>100+</Button>
       </Link>
     </motion.div>
   );

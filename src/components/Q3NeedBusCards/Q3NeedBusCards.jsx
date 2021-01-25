@@ -6,17 +6,9 @@ import "./Q3NeedBusCards.scss";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
-  let handleNeedBusCardsClick = (e) => {
-    let btnText = e.target.innerText;
-    if (btnText === "YES") {
-      setStorePrices({ ...storePrices, NeedBusCards: 750 });
-    } else if (btnText === "NO") {
-      setStorePrices({ ...storePrices, NeedBusCards: 0 });
-    }
-  };
-
   return (
     <motion.div
       className="need-bus-cards"
@@ -29,9 +21,9 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
         Do you need branded business cards and email signatures?
       </QuestionTitle>
       <Link to="/need-guidelines">
-        <Button onClick={handleNeedBusCardsClick}>YES</Button>
+        <Button onClick={forwardAnime}>YES</Button>
 
-        <Button onClick={handleNeedBusCardsClick}>NO</Button>
+        <Button onClick={forwardAnime}>NO</Button>
       </Link>
     </motion.div>
   );

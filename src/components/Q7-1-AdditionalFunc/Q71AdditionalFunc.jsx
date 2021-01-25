@@ -6,6 +6,7 @@ import { Button, QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
+import { forwardAnime } from "../../util";
 
 const Q71AdditionalFunc = () => {
   return (
@@ -25,80 +26,102 @@ const Q71AdditionalFunc = () => {
       </p>
 
       <div className="many-products-add">
-        <ul class="ks-cboxtags">
+        <ul className="ks-cboxtags">
           <li>
-            <input type="checkbox" id="checkboxOne" value="Rainbow Dash" />
-            <label for="checkboxOne">Rainbow Dash</label>
+            <input type="checkbox" id="checkboxOne" value="Related products" />
+            <label htmlFor="checkboxOne">Related products +£195</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxTwo" value="Cotton Candy" />
-            <label for="checkboxTwo">Cotton Candy</label>
+            <input type="checkbox" id="checkboxTwo" value="Gift wrapping" />
+            <label htmlFor="checkboxTwo">Gift wrapping +£130</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxThree" value="Rarity" />
-            <label for="checkboxThree">Rarity</label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkboxFour" value="Moondancer" />
-            <label for="checkboxFour">Moondancer</label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkboxFive" value="Surprise" />
-            <label for="checkboxFive">Surprise</label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkboxSix" value="Twilight Sparkle" />
-            <label for="checkboxSix">Twilight Sparkle</label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkboxSeven" value="Fluttershy" />
-            <label for="checkboxSeven">Fluttershy</label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkboxEight" value="Derpy Hooves" />
-            <label for="checkboxEight">Derpy Hooves</label>
+            <input type="checkbox" id="checkboxThree" value="Subscriptions" />
+            <label htmlFor="checkboxThree">Subscriptions</label>
           </li>
           <li>
             <input
               type="checkbox"
-              id="checkboxNine"
-              value="Princess Celestia"
+              id="checkboxFour"
+              value="Live support chat"
             />
-            <label for="checkboxNine">Princess Celestia</label>
+            <label htmlFor="checkboxFour">Live support chat +£130</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxTen" value="Gusty" />
-            <label for="checkboxTen">Gusty</label>
-          </li>
-          <li class="ks-selected">
-            <input type="checkbox" id="checkboxEleven" value="Discord" />
-            <label for="checkboxEleven">Discord</label>
+            <input
+              type="checkbox"
+              id="checkboxFive"
+              value="Loyalty programme"
+            />
+            <label htmlFor="checkboxFive">Loyalty programme +£480</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxTwelve" value="Clover" />
-            <label for="checkboxTwelve">Clover</label>
+            <input type="checkbox" id="checkboxSix" value="Wishlist" />
+            <label htmlFor="checkboxSix">Wishlist +£390</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="checkboxSeven"
+              value="Currency converter"
+            />
+            <label htmlFor="checkboxSeven">Currency converter +£260</label>
+          </li>
+          <li>
+            <input type="checkbox" id="checkboxEight" value="Product reviews" />
+            <label htmlFor="checkboxEight">Product reviews +£260</label>
+          </li>
+          <li>
+            <input type="checkbox" id="checkboxNine" value="Pre-order" />
+            <label htmlFor="checkboxNine">Pre-order +£260</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="checkboxTen"
+              value="Newsletter sign-up"
+            />
+            <label htmlFor="checkboxTen">Newsletter sign-up +£195</label>
+          </li>
+          <li className="ks-selected">
+            <input
+              type="checkbox"
+              id="checkboxEleven"
+              value="Customisable product"
+            />
+            <label htmlFor="checkboxEleven">Customisable product +£480</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="checkboxTwelve"
+              value="Custom size guide"
+            />
+            <label htmlFor="checkboxTwelve">Custom size guide +£260</label>
           </li>
           <li>
             <input
               type="checkbox"
               id="checkboxThirteen"
-              value="Baby Moondancer"
+              value="Product filtering"
             />
-            <label for="checkboxThirteen">Baby Moondancer</label>
+            <label htmlFor="checkboxThirteen">Product filtering +£390</label>
           </li>
           <li>
-            <input type="checkbox" id="checkboxFourteen" value="Medley" />
-            <label for="checkboxFourteen">Medley</label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkboxFifteen" value="Firefly" />
-            <label for="checkboxFifteen">Firefly</label>
+            <input
+              type="checkbox"
+              id="checkboxFourteen"
+              value="Recurring orders & Subscriptions"
+            />
+            <label htmlFor="checkboxFourteen">
+              Recurring orders & Subscriptions +£480
+            </label>
           </li>
         </ul>
       </div>
 
       <Link to="/contacts-and-details">
-        <Button>Continue</Button>
+        <Button onClick={forwardAnime}>Continue</Button>
       </Link>
     </motion.div>
   );
