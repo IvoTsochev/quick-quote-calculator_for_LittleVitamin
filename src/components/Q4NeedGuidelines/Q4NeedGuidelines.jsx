@@ -13,10 +13,12 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
+  // getting the price
   const getPriceHandler = (e) => {
     let priceNeedGuidelines = e.target.value;
     storePrices["Need Guidelines"] = Number(priceNeedGuidelines);
   };
+  // END getting the price
 
   return (
     <motion.div

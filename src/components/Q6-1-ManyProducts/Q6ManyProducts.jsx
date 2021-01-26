@@ -11,10 +11,12 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const ManyProducts = ({ storePrices, setStorePrices }) => {
+  // getting the price
   const getPriceHandler = (e) => {
     let priceManyProducts = e.target.value;
     storePrices["How Many Products"] = Number(priceManyProducts);
   };
+  // END getting the price
 
   return (
     <motion.div

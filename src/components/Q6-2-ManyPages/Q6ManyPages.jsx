@@ -11,10 +11,12 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q6ManyPages = ({ storePrices, setStorePrices }) => {
+  // getting the price
   const getPriceHandler = (e) => {
     let priceManyPages = e.target.value;
     storePrices["How Many Pages"] = Number(priceManyPages);
   };
+  // END getting the price
 
   return (
     <motion.div

@@ -13,10 +13,12 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
+  // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBusCards = e.target.value;
     storePrices["Need business cards"] = Number(priceNeedBusCards);
   };
+  // END getting the price
 
   return (
     <motion.div

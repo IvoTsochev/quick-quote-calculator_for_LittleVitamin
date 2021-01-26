@@ -11,10 +11,12 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q71AdditionalFunc = () => {
+  // getting the price
   const getPriceHandler = (e) => {
     let price71AdditionalFunc = e.target.value;
     console.log(price71AdditionalFunc);
   };
+  // END getting the price
 
   return (
     <motion.div

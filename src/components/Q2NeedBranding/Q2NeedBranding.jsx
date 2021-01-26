@@ -12,11 +12,13 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 
 const NeedBranding = ({ storePrices, setStorePrices }) => {
+  // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBranding = e.target.value;
     storePrices["Need Branding"] = Number(priceNeedBranding);
     console.log(storePrices);
   };
+  // END getting the price
 
   return (
     <motion.div
