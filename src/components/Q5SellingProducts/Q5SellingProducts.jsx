@@ -10,9 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
+  const getPriceHandler = (e) => {
+    let priceSellingProducts = e.target.value;
+    storePrices["You be selling products?"] = Number(priceSellingProducts);
+  };
+
   return (
     <motion.div
       className="selling-products"
@@ -31,14 +36,26 @@ const Q5SellingProducts = ({ storePrices, setStorePrices }) => {
         making full use of the intuitive Shopify platform.
       </p>
       <Link to="/many-products">
-        <Button value="3500" onClick={forwardAnime}>
+        <Button
+          value="3500"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           YES
         </Button>
       </Link>
 
       <Link to="/many-pages">
-        <Button value="2500" onClick={forwardAnime}>
+        <Button
+          value="2500"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
         </Button>
       </Link>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 // Styles
 import "./App.scss";
@@ -25,15 +25,30 @@ function App() {
   let location = useLocation();
 
   // STATE
-  // const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [storePrices, setStorePrices] = useState({
-    NeedBranding: 0,
-    NeedBusCards: 0,
-    NeedGuidelines: 0,
-    SellingProducts: 0,
-    ManyProducts: 0,
+    "Need Branding": 0,
+    "Need business cards": 0,
+    "Need Guidelines": 0,
+    "You be selling products?": 0,
+    "How Many Products": 0,
+    "How Many Pages": 0,
+    "Related products": 0,
   });
 
+  // suming the total price from storePrices object
+  let sumAllArr = Object.values(storePrices);
+  let sum = 0;
+  sumAllArr.forEach((el) => {
+    sum = sum + Number(el);
+  });
+  useEffect(() => {
+    setTotalPrice(sum);
+  }, [sum, setTotalPrice]);
+
+  // END suming the total price from storePrices object
+
+  // handling the GoBack and Forward animation
   let goBackHandler = () => {
     window.history.back();
     pageAnimation.exit.y = "150%";
@@ -45,6 +60,7 @@ function App() {
     pageAnimation.exit.y = "-150%";
     pageAnimation.hidden.y = "150%";
   };
+  // END handling the GoBack and Forward animation
 
   return (
     <div className="app">
@@ -91,7 +107,10 @@ function App() {
             </Route>
 
             <Route path="/many-pages">
-              <Q6ManyPages />
+              <Q6ManyPages
+                storePrices={storePrices}
+                setStorePrices={setStorePrices}
+              />
             </Route>
 
             <Route path="/q71additional-func">
@@ -121,7 +140,7 @@ function App() {
         />
 
         <div className="app-calc-stats">
-          <Quote />
+          <Quote totalPrice={totalPrice} />
         </div>
       </div>
     </div>

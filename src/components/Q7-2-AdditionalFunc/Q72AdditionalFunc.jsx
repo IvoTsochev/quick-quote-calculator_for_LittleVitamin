@@ -8,13 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
 const Q72AdditionalFunc = () => {
-  let clickFunc = (e) => {
-    console.log(e.target.value);
-  };
-
   return (
     <motion.div
       className="q72-additional-func"
@@ -32,7 +28,7 @@ const Q72AdditionalFunc = () => {
       </p>
       <div className="many-pages-add">
         <ul className="ks-cboxtags">
-          <li onClick={clickFunc}>
+          <li>
             <input type="checkbox" id="checkboxOne" value="130" />
             <label htmlFor="checkboxOne">Photo gallery +£130</label>
           </li>

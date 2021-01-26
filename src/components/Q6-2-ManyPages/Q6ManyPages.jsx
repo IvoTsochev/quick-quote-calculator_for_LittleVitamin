@@ -8,9 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
-const Q6ManyPages = () => {
+const Q6ManyPages = ({ storePrices, setStorePrices }) => {
+  const getPriceHandler = (e) => {
+    let priceManyPages = e.target.value;
+    storePrices["How Many Pages"] = Number(priceManyPages);
+  };
+
   return (
     <motion.div
       className="many-pages"
@@ -28,15 +33,33 @@ const Q6ManyPages = () => {
         page layout.
       </p>
       <Link to="/q72additional-func">
-        <Button value="0" onClick={forwardAnime}>
+        <Button
+          value="0"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           1-5
         </Button>
-        <Button value="2500" onClick={forwardAnime}>
+        <Button
+          value="2500"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           6-11
         </Button>
-        <Button value="5000" onClick={forwardAnime}>
+        <Button
+          value="5000"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           12+
         </Button>

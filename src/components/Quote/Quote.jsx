@@ -2,7 +2,7 @@ import React from "react";
 // Styles
 import "./Quote.scss";
 
-const Quote = () => {
+const Quote = ({ totalPrice }) => {
   return (
     <div className="quote">
       <div className="quote-title">
@@ -11,7 +11,10 @@ const Quote = () => {
       </div>
       <div className="quote-total">
         <hr />
-        <h3>Total</h3>
+        <div className="quote-total-inner">
+          <h3>Total</h3>
+          <p className="quote-total-price">£{totalPrice}</p>
+        </div>
       </div>
     </div>
   );

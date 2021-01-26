@@ -1,18 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { forwardAnime } from "../../util";
 // Styles
 import "./Q2NeedBranding.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
 
 const NeedBranding = ({ storePrices, setStorePrices }) => {
+  const getPriceHandler = (e) => {
+    let priceNeedBranding = e.target.value;
+    storePrices["Need Branding"] = Number(priceNeedBranding);
+    console.log(storePrices);
+  };
+
   return (
     <motion.div
       className="need-branding"

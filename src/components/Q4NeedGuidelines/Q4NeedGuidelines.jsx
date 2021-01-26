@@ -10,9 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
 const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
+  const getPriceHandler = (e) => {
+    let priceNeedGuidelines = e.target.value;
+    storePrices["Need Guidelines"] = Number(priceNeedGuidelines);
+  };
+
   return (
     <motion.div
       className="need-guidelines"
@@ -23,12 +28,24 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices }) => {
     >
       <QuestionTitle>Do you need a brand guidelines doc.?</QuestionTitle>
       <Link to="/selling-products">
-        <Button value="1000" onClick={forwardAnime}>
+        <Button
+          value="1000"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           YES
         </Button>
 
-        <Button value="0" onClick={forwardAnime}>
+        <Button
+          value="0"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
         </Button>
       </Link>

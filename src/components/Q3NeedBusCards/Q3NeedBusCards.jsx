@@ -10,9 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
+  const getPriceHandler = (e) => {
+    let priceNeedBusCards = e.target.value;
+    storePrices["Need business cards"] = Number(priceNeedBusCards);
+  };
+
   return (
     <motion.div
       className="need-bus-cards"
@@ -25,12 +30,24 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
         Do you need branded business cards and email signatures?
       </QuestionTitle>
       <Link to="/need-guidelines">
-        <Button value="750" onClick={forwardAnime}>
+        <Button
+          value="750"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           YES
         </Button>
 
-        <Button value="0" onClick={forwardAnime}>
+        <Button
+          value="0"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
         </Button>
       </Link>

@@ -8,9 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
 const Q71AdditionalFunc = () => {
+  const getPriceHandler = (e) => {
+    let price71AdditionalFunc = e.target.value;
+    console.log(price71AdditionalFunc);
+  };
+
   return (
     <motion.div
       className="q71-additional-func"
@@ -30,7 +35,12 @@ const Q71AdditionalFunc = () => {
       <div className="many-products-add">
         <ul className="ks-cboxtags">
           <li>
-            <input type="checkbox" id="checkboxOne" value="195" />
+            <input
+              onClick={getPriceHandler}
+              type="checkbox"
+              id="checkboxOne"
+              value="195"
+            />
             <label htmlFor="checkboxOne">Related products +£195</label>
           </li>
           <li>

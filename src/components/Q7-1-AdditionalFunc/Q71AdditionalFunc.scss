@@ -33,28 +33,28 @@
       cursor: pointer;
     }
 
-    ul.ks-cboxtags li label::before {
-      display: inline-block;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 12px;
-      padding: 2px 6px 2px 2px;
-      content: "\f067";
-      transition: transform 0.3s ease-in-out;
-    }
+    // ul.ks-cboxtags li label::before {
+    //   display: inline-block;
+    //   font-style: normal;
+    //   font-variant: normal;
+    //   text-rendering: auto;
+    //   -webkit-font-smoothing: antialiased;
+    //   font-family: "Font Awesome 5 Free";
+    //   font-weight: 900;
+    //   font-size: 12px;
+    //   padding: 2px 6px 2px 2px;
+    //   content: "\f067";
+    //   transition: transform 0.3s ease-in-out;
+    // }
 
-    ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
-      content: "\f00c";
-      transform: rotate(-360deg);
-      transition: transform 0.3s ease-in-out;
-    }
+    // ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+    //   content: "\f00c";
+    //   transform: rotate(-360deg);
+    //   transition: transform 0.3s ease-in-out;
+    // }
 
     ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-      border: 2px solid #1bdbf8;
+      // border: 2px solid #1bdbf8;
       background-color: #12bbd4;
       color: #fff;
       transition: all 0.2s;
@@ -67,9 +67,9 @@
       position: absolute;
       opacity: 0;
     }
-    ul.ks-cboxtags li input[type="checkbox"]:focus + label {
-      border: 2px solid #e9a1ff;
-    }
+    // ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+    //   border: 2px solid #e9a1ff;
+    // }
   }
 }
 

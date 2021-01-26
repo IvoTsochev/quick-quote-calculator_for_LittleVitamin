@@ -8,9 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import { forwardAnime, getPriceHandler } from "../../util";
+import { forwardAnime } from "../../util";
 
 const ManyProducts = ({ storePrices, setStorePrices }) => {
+  const getPriceHandler = (e) => {
+    let priceManyProducts = e.target.value;
+    storePrices["How Many Products"] = Number(priceManyProducts);
+  };
+
   return (
     <motion.div
       className="many-products"
@@ -25,15 +30,33 @@ const ManyProducts = ({ storePrices, setStorePrices }) => {
         project.
       </p>
       <Link to="/q71additional-func">
-        <Button value="0" onClick={forwardAnime}>
+        <Button
+          value="0"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           0-20
         </Button>
-        <Button value="2500" onClick={forwardAnime}>
+        <Button
+          value="2500"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           21-100
         </Button>
-        <Button value="6500" onClick={forwardAnime}>
+        <Button
+          value="6500"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           100+
         </Button>
