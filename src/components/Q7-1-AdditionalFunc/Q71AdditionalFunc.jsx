@@ -14,7 +14,6 @@ const Q71AdditionalFunc = () => {
   // getting the price
   const getPriceHandler = (e) => {
     let price71AdditionalFunc = e.target.value;
-    console.log(price71AdditionalFunc);
   };
   // END getting the price
 
@@ -37,12 +36,7 @@ const Q71AdditionalFunc = () => {
       <div className="many-products-add">
         <ul className="ks-cboxtags">
           <li>
-            <input
-              onClick={getPriceHandler}
-              type="checkbox"
-              id="checkboxOne"
-              value="195"
-            />
+            <input type="checkbox" id="checkboxOne" value="195" />
             <label htmlFor="checkboxOne">Related products +£195</label>
           </li>
           <li>
