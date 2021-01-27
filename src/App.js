@@ -44,7 +44,7 @@ function App() {
   });
   useEffect(() => {
     setTotalPrice(sum);
-  }, [sum, setTotalPrice]);
+  }, [sum, setTotalPrice, storePrices]);
 
   // END suming the total price from storePrices object
 
@@ -114,7 +114,10 @@ function App() {
             </Route>
 
             <Route path="/q71additional-func">
-              <Q71AdditionalFunc />
+              <Q71AdditionalFunc
+                storePrices={storePrices}
+                setStorePrices={setStorePrices}
+              />
             </Route>
 
             <Route path="/q72additional-func">

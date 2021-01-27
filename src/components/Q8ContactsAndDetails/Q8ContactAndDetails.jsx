@@ -2,8 +2,7 @@ import React from "react";
 // Styles
 import "./Q8ContactsAndDetails.scss";
 import { QuestionTitle } from "../../globalStyling";
-import {faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";

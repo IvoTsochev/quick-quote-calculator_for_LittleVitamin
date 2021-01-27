@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Components
+import SingleCheckBtn from "../SingleCheckBtn/SingleCheckBtn";
 // Styles
 import "./Q71AdditionalFunc.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -10,13 +12,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
-const Q71AdditionalFunc = () => {
-  // getting the price
-  const getPriceHandler = (e) => {
-    let price71AdditionalFunc = e.target.value;
-  };
-  // END getting the price
-
+const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
   return (
     <motion.div
       className="q71-additional-func"
@@ -36,62 +32,136 @@ const Q71AdditionalFunc = () => {
       <div className="many-products-add">
         <ul className="ks-cboxtags">
           <li>
-            <input type="checkbox" id="checkboxOne" value="195" />
-            <label htmlFor="checkboxOne">Related products +£195</label>
+            <SingleCheckBtn
+              price={195}
+              name={"Q71 Related products"}
+              label={"Related products +£195"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxTwo" value="130" />
-            <label htmlFor="checkboxTwo">Gift wrapping +£130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q71 Gift Wrapping"}
+              label={"Gift wrapping +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxThree" value="0" />
-            <label htmlFor="checkboxThree">Subscriptions</label>
+            <SingleCheckBtn
+              price={0}
+              name={"Q71 Subscriptions"}
+              label={"Subscriptions"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxFour" value="130" />
-            <label htmlFor="checkboxFour">Live support chat +£130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q71 Live support chat"}
+              label={"Live support chat +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxFive" value="480" />
-            <label htmlFor="checkboxFive">Loyalty programme +£480</label>
+            <SingleCheckBtn
+              price={480}
+              name={"Q71 Loyalty programme"}
+              label={"Loyalty programme +£480"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxSix" value="390" />
-            <label htmlFor="checkboxSix">Wishlist +£390</label>
+            <SingleCheckBtn
+              price={390}
+              name={"Q71 Wishlist"}
+              label={"Wishlist +£390"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxSeven" value="260" />
-            <label htmlFor="checkboxSeven">Currency converter +£260</label>
+            <SingleCheckBtn
+              price={260}
+              name={"Q71 Currency converter"}
+              label={"Currency converter +£260"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxEight" value="260" />
-            <label htmlFor="checkboxEight">Product reviews +£260</label>
+            <SingleCheckBtn
+              price={260}
+              name={"Q71 Product reviews"}
+              label={"Product reviews +£260"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
+
           <li>
-            <input type="checkbox" id="checkboxNine" value="260" />
-            <label htmlFor="checkboxNine">Pre-order +£260</label>
+            <SingleCheckBtn
+              price={260}
+              name={"Q71 Pre-order"}
+              label={"Pre-order +£260"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
+
           <li>
-            <input type="checkbox" id="checkboxTen" value="195" />
-            <label htmlFor="checkboxTen">Newsletter sign-up +£195</label>
+            <SingleCheckBtn
+              price={195}
+              name={"Q71 Newsletter sign-up"}
+              label={"Newsletter sign-up +£195"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
-          <li className="ks-selected">
-            <input type="checkbox" id="checkboxEleven" value="480" />
-            <label htmlFor="checkboxEleven">Customisable product +£480</label>
-          </li>
+
           <li>
-            <input type="checkbox" id="checkboxTwelve" value="260" />
-            <label htmlFor="checkboxTwelve">Custom size guide +£260</label>
+            <SingleCheckBtn
+              price={480}
+              name={"Q71 Customisable product"}
+              label={"Customisable product +£480"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
+
           <li>
-            <input type="checkbox" id="checkboxThirteen" value="390" />
-            <label htmlFor="checkboxThirteen">Product filtering +£390</label>
+            <SingleCheckBtn
+              price={260}
+              name={"Q71 Custom size guide"}
+              label={"Custom size guide +£260"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
+
           <li>
-            <input type="checkbox" id="checkboxFourteen" value="480" />
-            <label htmlFor="checkboxFourteen">
-              Recurring orders & Subscriptions +£480
-            </label>
+            <SingleCheckBtn
+              price={390}
+              name={"Q71 Product filtering"}
+              label={"Product filtering +£390"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
+          </li>
+
+          <li>
+            <SingleCheckBtn
+              price={480}
+              name={"Q71 Recurring orders & Subscriptions"}
+              label={"Recurring orders & Subscriptions +£480"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
         </ul>
       </div>
