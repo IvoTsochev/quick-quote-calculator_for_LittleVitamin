@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 
-const NeedBranding = ({ storePrices, setStorePrices }) => {
+const NeedBranding = ({ storePrices, setStorePrices, name }) => {
   // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBranding = e.target.value;
-    storePrices["Need Branding"] = Number(priceNeedBranding);
+    storePrices[name] = Number(priceNeedBranding);
     console.log(storePrices);
   };
   // END getting the price

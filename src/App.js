@@ -26,15 +26,7 @@ function App() {
 
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
-  const [storePrices, setStorePrices] = useState({
-    "Need Branding": 0,
-    "Need business cards": 0,
-    "Need Guidelines": 0,
-    "You be selling products?": 0,
-    "How Many Products": 0,
-    "How Many Pages": 0,
-    "Related products": 0,
-  });
+  const [storePrices, setStorePrices] = useState({});
 
   // suming the total price from storePrices object
   let sumAllArr = Object.values(storePrices);
@@ -75,6 +67,7 @@ function App() {
               <Q2NeedBranding
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
+                name={"Need Branding"}
               />
             </Route>
 
@@ -82,6 +75,7 @@ function App() {
               <Q3NeedBusCards
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
+                name={"Need business cards"}
               />
             </Route>
 
@@ -89,6 +83,7 @@ function App() {
               <Q4NeedGuidelines
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
+                name={"Need Guidelines"}
               />
             </Route>
 
@@ -96,6 +91,7 @@ function App() {
               <Q5SellingProducts
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
+                name={"You be selling products?"}
               />
             </Route>
 
@@ -103,6 +99,7 @@ function App() {
               <Q6ManyProducts
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
+                name={"How Many Products"}
               />
             </Route>
 
@@ -110,6 +107,7 @@ function App() {
               <Q6ManyPages
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
+                name={"How Many Pages"}
               />
             </Route>
 
@@ -146,7 +144,7 @@ function App() {
         />
 
         <div className="app-calc-stats">
-          <Quote totalPrice={totalPrice} />
+          <Quote totalPrice={totalPrice} storePrices={storePrices} />
         </div>
       </div>
     </div>

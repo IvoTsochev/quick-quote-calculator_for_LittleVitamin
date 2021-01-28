@@ -2,7 +2,13 @@ import React from "react";
 // Styles
 import "./Quote.scss";
 
-const Quote = ({ totalPrice }) => {
+const Quote = ({ totalPrice, storePrices }) => {
+  for (const key in storePrices) {
+    if (key === "Need Branding") {
+      console.log("branding is here");
+    }
+  }
+
   return (
     <div className="quote">
       <div className="quote-title">

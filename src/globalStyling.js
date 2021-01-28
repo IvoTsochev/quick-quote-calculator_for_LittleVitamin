@@ -40,7 +40,7 @@ export const CheckBtn = styled.button`
   text-align: left;
   cursor: pointer;
   padding: 0.3rem;
-
+  opacity: 1;
   &:focus {
     outline: none;
   }

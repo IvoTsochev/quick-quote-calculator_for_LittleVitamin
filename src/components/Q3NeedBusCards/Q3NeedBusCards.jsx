@@ -12,11 +12,11 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
-const Q3NeedBusCards = ({ storePrices, setStorePrices }) => {
+const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
   // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBusCards = e.target.value;
-    storePrices["Need business cards"] = Number(priceNeedBusCards);
+    storePrices[name] = Number(priceNeedBusCards);
   };
   // END getting the price
 

@@ -10,11 +10,11 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
-const ManyProducts = ({ storePrices, setStorePrices }) => {
+const ManyProducts = ({ storePrices, setStorePrices, name }) => {
   // getting the price
   const getPriceHandler = (e) => {
     let priceManyProducts = e.target.value;
-    storePrices["How Many Products"] = Number(priceManyProducts);
+    storePrices[name] = Number(priceManyProducts);
   };
   // END getting the price
 
