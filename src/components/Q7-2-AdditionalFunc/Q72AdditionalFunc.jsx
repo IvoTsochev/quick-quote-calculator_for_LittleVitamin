@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Components
+import SingleCheckBtn from "../SingleCheckBtn/SingleCheckBtn";
 // Styles
 import "./Q72AdditionalFunc.scss";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -10,7 +12,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
-const Q72AdditionalFunc = () => {
+const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
   return (
     <motion.div
       className="q72-additional-func"
@@ -29,48 +31,103 @@ const Q72AdditionalFunc = () => {
       <div className="many-pages-add">
         <ul className="ks-cboxtags">
           <li>
-            <input type="checkbox" id="checkboxOne" value="130" />
-            <label htmlFor="checkboxOne">Photo gallery +£130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Photo gallery"}
+              label={"Photo gallery +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxTwo" value="195" />
-            <label htmlFor="checkboxTwo">Newsletter sign-up +£195</label>
+            <SingleCheckBtn
+              price={195}
+              name={"Q72 Newsletter sign-up"}
+              label={"Newsletter sign-up +£195"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxThree" value="130" />
-            <label htmlFor="checkboxThree">Video content £130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Video content"}
+              label={"Video content £130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxFour" value="195" />
-            <label htmlFor="checkboxFour">Age gate +£195</label>
+            <SingleCheckBtn
+              price={195}
+              name={"Q72 Age gate"}
+              label={"Age gate +£195"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxFive" value="480" />
-            <label htmlFor="checkboxFive">File sharing +£480</label>
+            <SingleCheckBtn
+              price={480}
+              name={"Q72 File sharing"}
+              label={"File sharing +£480"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxSix" value="480" />
-            <label htmlFor="checkboxSix">Booking schedule +£480</label>
+            <SingleCheckBtn
+              price={480}
+              name={"Q72 Booking schedule"}
+              label={"Booking schedule +£480"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxSeven" value="130" />
-            <label htmlFor="checkboxSeven">Contact form +£130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Contact form"}
+              label={"Contact form +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxEight" value="130" />
-            <label htmlFor="checkboxEight">Social media feed +£130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Social media feed"}
+              label={"Social media feed +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxNine" value="130" />
-            <label htmlFor="checkboxNine">Live support chat +£130</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Live support chat"}
+              label={"Live support chat +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
           <li>
-            <input type="checkbox" id="checkboxTen" value="480" />
-            <label htmlFor="checkboxTen">Event calendar +£480</label>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Event calendar"}
+              label={"Event calendar +£480"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
-          <li className="ks-selected">
-            <input type="checkbox" id="checkboxEleven" value="130" />
-            <label htmlFor="checkboxEleven">Branded Google Map +£130</label>
+          <li>
+            <SingleCheckBtn
+              price={130}
+              name={"Q72 Branded Google Map"}
+              label={"Branded Google Map +£130"}
+              storePrices={storePrices}
+              setStorePrices={setStorePrices}
+            />
           </li>
         </ul>
       </div>
@@ -78,7 +135,7 @@ const Q72AdditionalFunc = () => {
       <Link to="/contacts-and-details">
         <Button onClick={forwardAnime}>
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          Continue
+          Next step
         </Button>
       </Link>
     </motion.div>

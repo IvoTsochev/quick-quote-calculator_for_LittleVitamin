@@ -1,4 +1,5 @@
 import React from "react";
+
 // Styles
 import "./Q8ContactsAndDetails.scss";
 import { QuestionTitle } from "../../globalStyling";
@@ -16,6 +17,7 @@ const Q8ContactAndDetails = () => {
       animate="show"
       exit="exit"
     >
+      <div className="klaviyo-form-Rjw9cU"></div>
       <form className="contact-form">
         <QuestionTitle>
           Help us to provide you with a more accurate estimate.

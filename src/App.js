@@ -121,7 +121,10 @@ function App() {
             </Route>
 
             <Route path="/q72additional-func">
-              <Q72AdditionalFunc />
+              <Q72AdditionalFunc
+                storePrices={storePrices}
+                setStorePrices={setStorePrices}
+              />
             </Route>
 
             <Route path="/contacts-and-details">

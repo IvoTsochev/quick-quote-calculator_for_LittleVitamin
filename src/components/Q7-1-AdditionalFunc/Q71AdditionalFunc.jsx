@@ -169,7 +169,7 @@ const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
       <Link to="/contacts-and-details">
         <Button onClick={forwardAnime}>
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          Continue
+          Next step
         </Button>
       </Link>
     </motion.div>

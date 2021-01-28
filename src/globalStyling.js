@@ -28,6 +28,27 @@ export const Button = styled(motion.button)`
   }
 `;
 
+export const CheckBtn = styled.button`
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 150px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.3rem;
+
+  &:focus {
+    outline: none;
+  }
+  span {
+    font-weight: 200;
+  }
+`;
+
 export const QuestionTitle = styled.h2`
   margin-bottom: 1rem;
   font-size: 2rem;

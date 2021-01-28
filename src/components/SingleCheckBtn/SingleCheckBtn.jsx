@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Styles
-import { Button } from "../../globalStyling";
+import { CheckBtn } from "../../globalStyling";
 import "./SingleCheckBtn.scss";
 
 const SingleCheckBtn = ({
@@ -29,7 +29,7 @@ const SingleCheckBtn = ({
 
   return (
     <div className="single-check-btn">
-      <Button onClick={handleClick}>{label}</Button>
+      <CheckBtn onClick={handleClick}>{label}</CheckBtn>
     </div>
   );
 };
