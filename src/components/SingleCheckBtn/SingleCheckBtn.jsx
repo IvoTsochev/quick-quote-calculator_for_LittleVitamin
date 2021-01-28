@@ -29,7 +29,12 @@ const SingleCheckBtn = ({
 
   return (
     <div className="single-check-btn">
-      <CheckBtn onClick={handleClick}>{label}</CheckBtn>
+      <CheckBtn
+        style={isClicked ? { opacity: "100%" } : { opacity: "50%" }}
+        onClick={handleClick}
+      >
+        {label}
+      </CheckBtn>
     </div>
   );
 };
