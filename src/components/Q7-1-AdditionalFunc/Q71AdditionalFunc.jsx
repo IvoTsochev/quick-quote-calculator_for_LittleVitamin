@@ -49,15 +49,7 @@ const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={setStorePrices}
             />
           </li>
-          <li>
-            <SingleCheckBtn
-              price={0}
-              name={"Q71 Subscriptions"}
-              label={"Subscriptions"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
+
           <li>
             <SingleCheckBtn
               price={130}
@@ -157,8 +149,8 @@ const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
           <li>
             <SingleCheckBtn
               price={480}
-              name={"Q71 Recurring orders & Subscriptions"}
-              label={"Recurring orders & Subscriptions +£480"}
+              name={"Q71 Subscription service"}
+              label={"Subscription service +£480"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />

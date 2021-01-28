@@ -13,17 +13,14 @@ const SingleCheckBtn = ({
   // State
   const [isClicked, setIsClied] = useState(true);
 
+  // if additional functionality is clicked, push the name and price into the main object => storePrices
   let handleClick = () => {
     setIsClied((prev) => !prev);
+
     let storeDes = { ...storePrices };
-    console.log(storeDes);
-    if (isClicked) {
-      console.log(isClicked);
-      storeDes[name] = Number(price);
-    } else {
-      console.log(isClicked);
-      storeDes[name] = Number(0);
-    }
+
+    isClicked ? (storeDes[name] = Number(price)) : (storeDes[name] = Number(0));
+
     setStorePrices(storeDes);
   };
 

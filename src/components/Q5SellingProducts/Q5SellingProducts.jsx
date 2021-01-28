@@ -46,19 +46,19 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
           }}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          YES
+          Yes, I will be selling
         </Button>
       </Link>
 
       <Link to="/many-pages">
         <Button
-          value="2500"
+          value="0"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
+          <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> Nope
         </Button>
       </Link>
     </motion.div>

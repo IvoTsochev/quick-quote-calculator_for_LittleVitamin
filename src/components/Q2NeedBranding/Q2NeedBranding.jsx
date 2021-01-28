@@ -16,7 +16,6 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
   const getPriceHandler = (e) => {
     let priceNeedBranding = e.target.value;
     storePrices[name] = Number(priceNeedBranding);
-    console.log(storePrices);
   };
   // END getting the price
 
@@ -44,7 +43,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
           value="750"
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />
-          YES, I NEED BRANDING
+          Yes, I need branding
         </Button>
       </Link>
 
@@ -57,7 +56,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
           value="0"
         >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} />
-          NO, I HAVE MY OWN BRANDING
+          No thanks
         </Button>
       </Link>
     </motion.div>

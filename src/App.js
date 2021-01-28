@@ -20,6 +20,7 @@ import Q71AdditionalFunc from "./components/Q7-1-AdditionalFunc/Q71AdditionalFun
 import Q72AdditionalFunc from "./components/Q7-2-AdditionalFunc/Q72AdditionalFunc";
 import Q8ContactAndDetails from "./components/Q8ContactsAndDetails/Q8ContactAndDetails";
 import Quote from "./components/Quote/Quote";
+import videoBg from "./img/LV-AN01-sonic-ident-1280x720-1.mp4";
 
 function App() {
   let location = useLocation();
@@ -56,6 +57,9 @@ function App() {
 
   return (
     <div className="app">
+      <video className="videoBg" autoPlay loop muted>
+        <source src={videoBg} type="video/mp4" />
+      </video>
       <div className="app-main">
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>

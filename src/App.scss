@@ -11,15 +11,28 @@ body {
   color: #fff;
 }
 
+.videoBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: none;
+  width: 100%;
+  z-index: 0;
+}
+
 .app {
   height: 100vh;
   display: flex;
   overflow: hidden;
+
   .app-main {
     position: relative;
     flex: 70%;
   }
   .app-calc {
+    z-index: 1;
     flex: 30%;
     .goBack-btn-arrow {
       position: absolute;
