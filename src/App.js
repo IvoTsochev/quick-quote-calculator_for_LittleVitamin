@@ -130,7 +130,7 @@ function App() {
             </Route>
 
             <Route path="/contacts-and-details">
-              <Q8ContactAndDetails />
+              <Q8ContactAndDetails storePrices={storePrices} />
             </Route>
           </Switch>
         </AnimatePresence>
