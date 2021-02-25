@@ -21,6 +21,7 @@ import Q72AdditionalFunc from "./components/Q7-2-AdditionalFunc/Q72AdditionalFun
 import Q8ContactAndDetails from "./components/Q8ContactsAndDetails/Q8ContactAndDetails";
 import Quote from "./components/Quote/Quote";
 import videoBg from "./img/LV-AN01-sonic-ident-1280x720-1.mp4";
+import ThankYou from './components/ThankYou/ThankYou'
 
 function App() {
   let location = useLocation();
@@ -131,6 +132,10 @@ function App() {
 
             <Route path="/contacts-and-details">
               <Q8ContactAndDetails storePrices={storePrices} />
+            </Route>
+
+            <Route path='/thankyou'>
+              <ThankYou />
             </Route>
           </Switch>
         </AnimatePresence>
