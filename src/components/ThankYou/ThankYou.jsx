@@ -14,7 +14,9 @@ const ThankYou = () => {
             animate="show"
             exit="exit"
         >
-            <h2>Thank you for your time. We'll get back to you as soon as possible</h2>
+            <h1>Thank you for your time!</h1>
+            <br />
+            <h1>We'll get back to you as soon as possible.</h1>
         </motion.div>
     )
 }
