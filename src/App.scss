@@ -56,6 +56,9 @@ body {
         transform: scale(1.5);
       }
     }
+    .hideArrow {
+      opacity: 0;
+    }
     .app-calc-stats {
       height: 100%;
       width: 100%;

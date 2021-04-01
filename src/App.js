@@ -26,6 +26,13 @@ import ThankYou from './components/ThankYou/ThankYou'
 function App() {
   let location = useLocation();
 
+  let lastPage = false;
+  if (location.pathname === '/thankyou') {
+    lastPage = true;
+  }
+
+  console.log(lastPage);
+
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
   const [storePrices, setStorePrices] = useState({});
@@ -148,7 +155,7 @@ function App() {
         />
         <FontAwesomeIcon
           onClick={goForwardHandler}
-          className="goForward-btn-arrow"
+          className={`goForward-btn-arrow ${lastPage ? 'hideArrow' : ''}`}
           icon={faArrowDown}
         />
 
