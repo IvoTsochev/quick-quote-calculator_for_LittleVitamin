@@ -5,6 +5,45 @@
   font-family: sans-serif;
 }
 
+@font-face {
+  font-family: 'Visby-light';
+  src: url(./Fonts/VisbyCF-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Visby CF';
+  src: url(./Fonts/VisbyCF-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Visby-bold';
+  src: url(./Fonts/VisbyCF-Bold.woff) format('woff');
+}
+
+p, h3 {
+  font-family: 'Visby CF', sans-serif;
+  font-size: 19px;
+  font-weight: 200;
+  line-height: 24px;
+}
+
+h2 {
+  font-family: 'Visby CF', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 52px;
+}
+
+button {
+  font-family: 'Visby CF', sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+
+
+
 body {
   background-image: url(./img/quoteBG.jpg);
   background-color: #000;

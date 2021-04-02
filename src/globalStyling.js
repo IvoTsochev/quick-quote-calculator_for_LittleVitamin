@@ -2,17 +2,19 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Button = styled(motion.button)`
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 10px 40px;
   margin-top: 1rem;
   margin-right: 1rem;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 25px;
+  border-radius: 30px;
   color: white;
   transform: scale(1);
   transition: all 0.3s ease;
   cursor: pointer;
   min-width: 150px;
+  height: 53px;
   &:hover {
     border: 1px solid #fff;
     background-color: #fff;
