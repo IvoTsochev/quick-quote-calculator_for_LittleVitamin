@@ -31,7 +31,6 @@ function App() {
     lastPage = true;
   }
 
-  console.log(lastPage);
 
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
@@ -65,7 +64,7 @@ function App() {
 
   return (
     <div className="app">
-      <video className="videoBg" autoPlay loop muted>
+      <video className="videoBg" loop muted>
         <source src={videoBg} type="video/mp4" />
       </video>
       <div className="app-main">

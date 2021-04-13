@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
+import axios from 'axios';
 import emailjs from "emailjs-com";
 import { Redirect } from 'react-router-dom'
 // Styles
@@ -12,6 +13,7 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Q8ContactAndDetails = ({ storePrices }) => {
   const [isSent, setIsSent] = useState(undefined);
+  const [emailInput, setEmailInput] = useState('');
 
   // Client choices | passed to the hiddne input field
   let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join(" || ");
@@ -26,7 +28,26 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   function sendEmail(e) {
     e.preventDefault();
 
-    setIsSent(true)
+    setIsSent(true);
+
+    axios({
+      method: 'post',
+      headers: {
+        'Access-Control-Allow-Headers': "*"
+      },
+      url: '/api/v2/list/WEZrgV/members',
+      data: {
+        "api_key": 'pk_01391ab84de188f478c7051cad864f77db',
+        "profiles": [
+          {
+            "email": `${emailInput}`
+          }
+        ]
+      }
+    })
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+
 
     setTimeout(() => {
       emailjs
@@ -102,6 +123,8 @@ const Q8ContactAndDetails = ({ storePrices }) => {
                 type="email"
                 placeholder="Email Address"
                 name="email"
+                value={emailInput}
+                onChange={(e) => setEmailInput(e.target.value)}
               />
             </div>
 
