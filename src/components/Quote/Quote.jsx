@@ -125,7 +125,7 @@ const Quote = ({ totalPrice, storePrices }) => {
   return (
     <div className="quote">
       <div className="quote-title">
-        <h3>Quote</h3>
+        <h2>Quote</h2>
         <hr />
       </div>
 
@@ -139,7 +139,7 @@ const Quote = ({ totalPrice, storePrices }) => {
       <div className="quote-total">
         <hr />
         <div className="quote-total-inner">
-          <h3>Total</h3>
+          <h2>Total</h2>
           <p className="quote-total-price">£{totalPrice}</p>
         </div>
       </div>

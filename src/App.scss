@@ -32,6 +32,7 @@ h2 {
   font-weight: 900;
   font-size: 28px;
   line-height: 52px;
+  text-align: left !important;
 }
 
 button {
@@ -65,6 +66,15 @@ body {
   height: 100vh;
   display: flex;
   overflow: hidden;
+
+  .pill-logo {
+    z-index: 999;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 100px;
+    height: auto;
+  }
 
   .app-main {
     position: relative;

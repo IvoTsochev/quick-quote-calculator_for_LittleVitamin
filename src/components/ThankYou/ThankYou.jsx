@@ -14,9 +14,14 @@ const ThankYou = () => {
             animate="show"
             exit="exit"
         >
-            <h1>Thank you for your time!</h1>
+            <h2>Thank you for your time!</h2>
             <br />
-            <h1>We'll get back to you as soon as possible.</h1>
+            <h2>We'll get back to you as soon as possible.</h2>
+
+            {/* Klaviyo snippet FORM */}
+            <div className="klaviyo-form-UijHwS"
+            ></div>
+            {/* END Klaviyo snippet FORM */}
         </motion.div>
     )
 }

@@ -62,10 +62,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
       {!isSent ? (
         <div className="forms-container">
 
-          {/* Klaviyo snippet FORM */}
-          <div className="klaviyo-form-UijHwS"
-          ></div>
-          {/* END Klaviyo snippet FORM */}
+
           <form className="contact-form" onSubmit={sendEmail}>
             <QuestionTitle>
               Help us to provide you with a more accurate estimate.

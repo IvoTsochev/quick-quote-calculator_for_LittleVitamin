@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Link, Route, Switch, useLocation } from "react-router-dom";
 // Styles
 import "./App.scss";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +21,8 @@ import Q72AdditionalFunc from "./components/Q7-2-AdditionalFunc/Q72AdditionalFun
 import Q8ContactAndDetails from "./components/Q8ContactsAndDetails/Q8ContactAndDetails";
 import Quote from "./components/Quote/Quote";
 import videoBg from "./img/LV-AN01-sonic-ident-1280x720-1.mp4";
-import ThankYou from './components/ThankYou/ThankYou'
+import ThankYou from './components/ThankYou/ThankYou';
+import pill_logo from './img/White-Pill_Square.png'
 
 function App() {
   let location = useLocation();
@@ -65,6 +66,9 @@ function App() {
 
   return (
     <div className="app">
+      <a href='https://lv2.littlevitamindevelopment.com'>
+        <img className='pill-logo' src={pill_logo}  alt="White-Pill_Square" />
+      </a>
       <video className="videoBg" autoPlay loop muted>
         <source src={videoBg} type="video/mp4" />
       </video>

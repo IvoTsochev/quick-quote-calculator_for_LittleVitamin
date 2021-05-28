@@ -7,8 +7,9 @@
   align-items: center;
   .quote-title {
     width: 100%;
-    h3 {
+    h2 {
       margin-bottom: 1rem;
+      text-align: left;
     }
     hr {
       width: 100%;
@@ -28,6 +29,9 @@
       margin-top: 1rem;
       .quote-total-price {
         font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
