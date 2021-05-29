@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // Styles
 import { CheckBtn } from "../../globalStyling";
-import "./SingleCheckBtn.scss";
+import "./SingleCheckBtn.css";
 
 const SingleCheckBtn = ({
   price,

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,qBAAqB;CACjC;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,cAAc,CAAC;IACb,QAAQ,EAAE,QAAQ;IAClB,OAAO,EAAE,SAAS;GACnB",
+    "sources": [
+        "Q2NeedBranding.scss"
+    ],
+    "names": [],
+    "file": "Q2NeedBranding.css"
+}

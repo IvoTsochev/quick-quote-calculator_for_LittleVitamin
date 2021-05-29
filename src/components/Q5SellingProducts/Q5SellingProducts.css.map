@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,qBAAqB;CACjC;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,iBAAiB,CAAC;IAChB,QAAQ,EAAE,QAAQ;IAClB,OAAO,EAAE,SAAS;GACnB",
+    "sources": [
+        "Q5SellingProducts.scss"
+    ],
+    "names": [],
+    "file": "Q5SellingProducts.css"
+}

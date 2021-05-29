@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { forwardAnime } from "../../util";
 // Styles
-import "./Q2NeedBranding.scss";
+import "./Q2NeedBranding.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";

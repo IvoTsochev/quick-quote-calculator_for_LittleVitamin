@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // Styles
-import "./Q4NeedGuidelines.scss";
+import "./Q4NeedGuidelines.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";

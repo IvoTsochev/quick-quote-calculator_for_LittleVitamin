@@ -2,7 +2,7 @@ import React from 'react'
 import Lottie from 'react-lottie'
 import * as loading from './loading.json'
 // Styling
-import './LoadingSpinner.scss'
+import './LoadingSpinner.css'
 
 const defaultOptions = {
     loop: true,

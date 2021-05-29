@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // Styles
-import "./Q6ManyProducts.scss";
+import "./Q6ManyProducts.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

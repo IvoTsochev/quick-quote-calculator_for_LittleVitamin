@@ -1,6 +1,6 @@
 import React from "react";
 // Style
-import "./QuoteListing.scss";
+import "./QuoteListing.css";
 
 const QuoteListing = ({ name }) => {
   return (

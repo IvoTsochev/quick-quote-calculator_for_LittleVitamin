@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // Styles
 import { Button, QuestionTitle } from "../../globalStyling";
-import "./Q3NeedBusCards.scss";
+import "./Q3NeedBusCards.css";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 

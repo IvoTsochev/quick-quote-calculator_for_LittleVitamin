@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { Redirect } from 'react-router-dom'
 // Styles
-import "./Q8ContactsAndDetails.scss";
+import "./Q8ContactsAndDetails.css";
 import { QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";

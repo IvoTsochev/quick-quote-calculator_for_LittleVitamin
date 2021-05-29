@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'Visby-light';
+  src: url(./Fonts/VisbyCF-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Visby CF';
+  src: url(./Fonts/VisbyCF-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Visby-bold';
+  src: url(./Fonts/VisbyCF-Bold.woff) format("woff");
+}
+
+p, h3 {
+  font-family: 'Visby CF', sans-serif;
+  font-size: 19px;
+  font-weight: 200;
+  line-height: 24px;
+}
+
+h2 {
+  font-family: 'Visby CF', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 52px;
+  text-align: left !important;
+}
+
+button {
+  font-family: 'Visby CF', sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+body {
+  background-image: url(./img/quoteBG.jpg);
+  background-color: #000;
+  color: #fff;
+}
+
+.videoBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: none;
+  width: 100%;
+  z-index: 0;
+}
+
+.app {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.app .pill-logo {
+  z-index: 999;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 100px;
+  height: auto;
+}
+
+.app .app-main {
+  position: relative;
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+}
+
+.app .app-calc {
+  z-index: 1;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+}
+
+.app .app-calc .goBack-btn-arrow {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.app .app-calc .goBack-btn-arrow:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.app .app-calc .goForward-btn-arrow {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.app .app-calc .goForward-btn-arrow:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.app .app-calc .hideArrow {
+  opacity: 0;
+}
+
+.app .app-calc .app-calc-stats {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .app .app-main {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .app .app-calc {
+    -webkit-box-flex: 0%;
+        -ms-flex: 0%;
+            flex: 0%;
+  }
+}
+/*# sourceMappingURL=App.css.map */

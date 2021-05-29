@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 // Styles
-import "./App.scss";
+import "./App.css";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animation

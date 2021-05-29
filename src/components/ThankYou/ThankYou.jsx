@@ -1,6 +1,6 @@
 import React from 'react'
 // Styles
-import './ThankYou.scss'
+import './ThankYou.css'
 // Animation
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";

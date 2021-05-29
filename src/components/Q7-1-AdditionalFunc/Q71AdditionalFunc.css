@@ -1,0 +1,26 @@
+.q71-additional-func {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.q71-additional-func .many-products-add ul.ks-cboxtags {
+  list-style: none;
+  margin-top: 1rem;
+  -webkit-columns: 2;
+          columns: 2;
+}
+
+.q71-additional-func .many-products-add ul.ks-cboxtags li {
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .q71-additional-func {
+    position: relative;
+    padding: 0rem 1rem;
+  }
+}
+/*# sourceMappingURL=Q71AdditionalFunc.css.map */

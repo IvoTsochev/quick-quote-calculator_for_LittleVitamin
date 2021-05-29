@@ -2,7 +2,7 @@ import React from "react";
 // Components
 import QuoteListing from "../QuoteListing/QuoteListing";
 // Styles
-import "./Quote.scss";
+import "./Quote.css";
 
 const Quote = ({ totalPrice, storePrices }) => {
   let quoteObject = {};

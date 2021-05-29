@@ -1,0 +1,32 @@
+.loading-spinner-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}
+
+.loading-spinner-container svg {
+  width: 250px !important;
+  height: 250px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(25%, -50%) !important;
+          transform: translate(25%, -50%) !important;
+}
+
+.loading-spinner-container svg path {
+  fill: transparent;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+/*# sourceMappingURL=LoadingSpinner.css.map */

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // Components
 import SingleCheckBtn from "../SingleCheckBtn/SingleCheckBtn";
 // Styles
-import "./Q71AdditionalFunc.scss";
+import "./Q71AdditionalFunc.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

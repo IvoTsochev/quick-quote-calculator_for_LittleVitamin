@@ -1,0 +1,66 @@
+.quote {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quote .quote-title {
+  width: 100%;
+}
+
+.quote .quote-title h2 {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.quote .quote-title hr {
+  width: 100%;
+}
+
+.quote .quoteArr {
+  width: 100%;
+}
+
+.quote .quote-total {
+  width: 100%;
+}
+
+.quote .quote-total hr {
+  width: 100%;
+}
+
+.quote .quote-total .quote-total-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.quote .quote-total .quote-total-inner .quote-total-price {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=Quote.css.map */
