@@ -22,7 +22,7 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices, name }) => {
 
   return (
     <motion.div
-      className="need-guidelines"
+      className="need-guidelines page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

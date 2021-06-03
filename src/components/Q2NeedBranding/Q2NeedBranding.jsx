@@ -21,7 +21,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
 
   return (
     <motion.div
-      className="need-branding"
+      className="need-branding page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

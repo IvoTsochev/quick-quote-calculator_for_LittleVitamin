@@ -56,7 +56,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
 
   return (
     <motion.div
-      className="contacts-and-details"
+      className="contacts-and-details page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

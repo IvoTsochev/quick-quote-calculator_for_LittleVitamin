@@ -22,7 +22,7 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
 
   return (
     <motion.div
-      className="need-bus-cards"
+      className="need-bus-cards page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

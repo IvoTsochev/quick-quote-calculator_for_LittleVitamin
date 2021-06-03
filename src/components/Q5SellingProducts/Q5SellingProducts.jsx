@@ -22,7 +22,7 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
 
   return (
     <motion.div
-      className="selling-products"
+      className="selling-products page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

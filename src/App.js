@@ -32,7 +32,11 @@ function App() {
     lastPage = true;
   }
 
-  console.log(lastPage);
+  let contactPage = false;
+  if (location.pathname === '/contacts-and-details') {
+    contactPage = true;
+  }
+
 
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
@@ -65,13 +69,14 @@ function App() {
   // END handling the GoBack and Forward animation
 
   return (
-    <div className="app">
+    <div className={`app ${contactPage ? 'mobile-app' : ''}`}>
       <a href='https://lv2.littlevitamindevelopment.com'>
         <img className='pill-logo' src={pill_logo}  alt="White-Pill_Square" />
       </a>
       <video className="videoBg" autoPlay loop muted>
         <source src={videoBg} type="video/mp4" />
       </video>
+      {/* Main area */}
       <div className="app-main">
 
         <AnimatePresence exitBeforeEnter>
@@ -152,6 +157,9 @@ function App() {
           </Switch>
         </AnimatePresence>
       </div>
+      {/* END Main area */}
+      
+      {/* Calc area */}
       <div className="app-calc">
         <FontAwesomeIcon
           onClick={goBackHandler}
@@ -164,10 +172,12 @@ function App() {
           icon={faArrowDown}
         />
 
-        <div className="app-calc-stats">
+        <div className="app-calc-stats" id={`${contactPage ? 'showCalcArea' : ''}`}>
           <Quote totalPrice={totalPrice} storePrices={storePrices} />
         </div>
       </div>
+      {/* END Calc area */}
+
     </div>
   );
 }

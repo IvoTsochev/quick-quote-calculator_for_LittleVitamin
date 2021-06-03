@@ -20,7 +20,7 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
 
   return (
     <motion.div
-      className="many-pages"
+      className="many-pages page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

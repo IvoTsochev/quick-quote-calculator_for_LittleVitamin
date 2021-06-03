@@ -14,7 +14,7 @@ import { forwardAnime } from "../../util";
 const LetsStart = () => {
   return (
     <motion.div
-      className="lets-start"
+      className="lets-start page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

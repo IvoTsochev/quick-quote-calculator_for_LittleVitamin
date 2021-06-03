@@ -15,7 +15,7 @@ import { forwardAnime } from "../../util";
 const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
   return (
     <motion.div
-      className="q71-additional-func"
+      className="q71-additional-func page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"

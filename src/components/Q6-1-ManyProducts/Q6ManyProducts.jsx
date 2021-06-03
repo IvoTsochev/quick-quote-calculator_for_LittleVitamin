@@ -20,7 +20,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
 
   return (
     <motion.div
-      className="many-products"
+      className="many-products page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
