@@ -19,9 +19,15 @@ const Q8ContactAndDetails = ({ storePrices }) => {
 
 
   // Initiating the contact form || https://www.emailjs.com/
-  let serviceEmailJs = "service_lmvx9rq";
-  let templateEmailJs = "template_m709w7r";
-  let userIdEmailJs = "user_t00SWW3rzOZdhMddvrdir";
+
+  // let serviceEmailJs = "service_lmvx9rq";
+  let serviceEmailJs = 'service_lvq1l0v';
+
+  // let templateEmailJs = "template_m709w7r";
+  let templateEmailJs = 'template_z5yn83t';
+
+  // let userIdEmailJs = "user_t00SWW3rzOZdhMddvrdir";
+  let userIdEmailJs = 'user_Q3E8qwuyQdkc3P6iQvNwh';
 
   function sendEmail(e) {
     e.preventDefault();

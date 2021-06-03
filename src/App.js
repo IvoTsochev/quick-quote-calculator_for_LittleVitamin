@@ -73,6 +73,7 @@ function App() {
         <source src={videoBg} type="video/mp4" />
       </video>
       <div className="app-main">
+
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route path="/" exact>
