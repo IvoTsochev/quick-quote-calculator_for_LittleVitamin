@@ -58,6 +58,21 @@ body {
   padding: none;
   width: 100%;
   z-index: 0;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+  background-size: cover;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
 }
 
 .app {
@@ -142,7 +157,21 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    display: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
   }
   .app .app-main {
     -webkit-box-flex: 100%;
@@ -176,6 +205,9 @@ body {
   }
   .app .app-calc .app-calc-stats .quote {
     width: 100%;
+  }
+  .app .app-calc .app-calc-stats .quote .quoteArr {
+    padding: .5rem;
   }
   .app #showCalcArea {
     display: block;
@@ -197,7 +229,21 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    display: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
   }
   .app .app-main {
     -webkit-box-flex: 100%;
@@ -232,6 +278,9 @@ body {
   .app .app-calc .app-calc-stats .quote {
     width: 100%;
   }
+  .app .app-calc .app-calc-stats .quote .quoteArr {
+    padding: .5rem;
+  }
   .app #showCalcArea {
     display: block;
   }
@@ -252,7 +301,21 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    display: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
   }
   .app .app-main {
     -webkit-box-flex: 100%;
@@ -287,6 +350,9 @@ body {
   .app .app-calc .app-calc-stats .quote {
     width: 100%;
   }
+  .app .app-calc .app-calc-stats .quote .quoteArr {
+    padding: .5rem;
+  }
   .app #showCalcArea {
     display: block;
   }
@@ -307,7 +373,21 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    display: none;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
   }
   .app .app-main {
     -webkit-box-flex: 100%;
@@ -330,9 +410,14 @@ body {
     padding: 0 3rem;
     display: none;
     padding-bottom: 3rem;
+    margin-top: 3rem;
+    height: auto;
   }
   .app .app-calc .app-calc-stats .quote {
     width: 100%;
+  }
+  .app .app-calc .app-calc-stats .quote .quoteArr {
+    padding: .5rem;
   }
   .app #showCalcArea {
     display: block;

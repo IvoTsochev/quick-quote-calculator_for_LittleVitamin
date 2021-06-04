@@ -31,6 +31,20 @@
 
 .quote .quoteArr {
   width: 100%;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.quote .quoteArr::-webkit-scrollbar {
+  width: 2px;
+}
+
+.quote .quoteArr::-webkit-scrollbar-track {
+  background-color: #9b9b9b;
+}
+
+.quote .quoteArr::-webkit-scrollbar-thumb {
+  background-color: white;
 }
 
 .quote .quote-total {

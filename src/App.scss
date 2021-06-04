@@ -60,6 +60,19 @@ body {
   padding: none;
   width: 100%;
   z-index: 0;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 .app {
@@ -123,7 +136,19 @@ body {
     .videoBg {
       height: 100%;
       object-fit: cover;
-      display: none;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background-size: cover;
+      transition: 1s opacity;
     }
     .app-main {
       flex: 100%;
@@ -150,6 +175,9 @@ body {
         padding-bottom: 3rem;
         .quote {
           width: 100%;
+          .quoteArr {
+            padding: .5rem;
+          }
         }
       }
     }
@@ -171,7 +199,19 @@ body {
     .videoBg {
       height: 100%;
       object-fit: cover;
-      display: none;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background-size: cover;
+      transition: 1s opacity;
     }
     .app-main {
       flex: 100%;
@@ -198,6 +238,9 @@ body {
         padding-bottom: 3rem;
         .quote {
           width: 100%;
+          .quoteArr {
+            padding: .5rem;
+          }
         }
       }
     }
@@ -219,7 +262,19 @@ body {
     .videoBg {
       height: 100%;
       object-fit: cover;
-      display: none;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background-size: cover;
+      transition: 1s opacity;
     }
     .app-main {
       flex: 100%;
@@ -246,6 +301,9 @@ body {
         padding-bottom: 3rem;
         .quote {
           width: 100%;
+          .quoteArr {
+            padding: .5rem;
+          }
         }
       }
     }
@@ -269,7 +327,19 @@ body {
     .videoBg {
       height: 100%;
       object-fit: cover;
-      display: none;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background-size: cover;
+      transition: 1s opacity;
     }
     .app-main {
       flex: 100%;
@@ -289,8 +359,13 @@ body {
         padding: 0 3rem;
         display: none;
         padding-bottom: 3rem;
+        margin-top: 3rem;
+        height: auto;
         .quote {
           width: 100%;
+          .quoteArr {
+            padding: .5rem;
+          }
         }
       }
     }
