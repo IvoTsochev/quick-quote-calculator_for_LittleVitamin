@@ -53,7 +53,8 @@ export const CheckBtn = styled.button`
 
 export const QuestionTitle = styled.h2`
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 28px;
+  font-weight: 900;
   &:focus {
     outline: none;
   }
