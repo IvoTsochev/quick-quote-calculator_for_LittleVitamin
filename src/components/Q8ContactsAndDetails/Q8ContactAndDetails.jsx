@@ -14,7 +14,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   const [isSent, setIsSent] = useState(undefined);
 
   // Client choices | passed to the hiddne input field
-  let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join('\n');
+  let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join('%3C%2Fbr%3E');
 
 
   // Initiating the contact form || https://www.emailjs.com/
