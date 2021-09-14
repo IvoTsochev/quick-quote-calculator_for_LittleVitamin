@@ -29,10 +29,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
     >
       <QuestionTitle>Do you need branding?</QuestionTitle>
       <p>
-        From a simple logo to the full brand story, an effective, engaging and
-        attractive brand can make a business standout. Our packages are
-        developed specifically for startups and small to medium business and aim
-        to create a visual identity that is recognisable.
+      From a simple logo to the full brand story, an effective, engaging and attractive brand can make a business standout. Our packages are developed specifically for startups, small to medium business and aim to create a visual identity that is recognisable.
       </p>
       <Link to="/need-business-cards">
         <Button

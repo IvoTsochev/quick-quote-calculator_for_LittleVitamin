@@ -32,10 +32,7 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
         Will your new website be selling products online?
       </QuestionTitle>
       <p>
-        eCommerce is becoming more and more popular as retailers bring their
-        products & stores online. Little Vitamin are Shopify Experts and our
-        eCommerce packages offer a full range of options for your online store,
-        making full use of the intuitive Shopify platform.
+      eCommerce is becoming more and more appealing as retailers move their products & stores online. Little Vitamin are Shopify Experts and our eCommerce packages offer a full range of options for your online store, making full use of the intuitive Shopify platform.
       </p>
       <Link to="/many-products">
         <Button
