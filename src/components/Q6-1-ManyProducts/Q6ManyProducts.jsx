@@ -26,7 +26,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
       animate="show"
       exit="exit"
     >
-      <QuestionTitle>How many products will you be selling?</QuestionTitle>
+      <QuestionTitle>How would you gauge the size and complexity of your eCommerce project?</QuestionTitle>
       <p>
         This number is a huge factor in determining the size of your store and
         project.

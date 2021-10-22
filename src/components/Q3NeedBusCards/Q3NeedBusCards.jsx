@@ -29,7 +29,7 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
       exit="exit"
     >
       <QuestionTitle>
-        Do you need branded business cards and email signatures?
+        Are you looking to ideate a unique tone of voice, personas, and bespoke assets for your brand?
       </QuestionTitle>
       <Link to="/need-guidelines">
         <Button
