@@ -32,99 +32,99 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
         <ul className="ks-cboxtags">
           <li>
             <SingleCheckBtn
-              price={130}
+              price={170}
               name={"Q72 Photo gallery"}
-              label={"Photo gallery +£130"}
+              label={"Photo gallery +£170"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={195}
+              price={170}
               name={"Q72 Newsletter sign-up"}
-              label={"Newsletter sign-up +£195"}
+              label={"Newsletter sign-up +£170"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={130}
+              price={255}
               name={"Q72 Video content"}
-              label={"Video content £130"}
+              label={"Video content £255"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={195}
+              price={255}
               name={"Q72 Age gate"}
-              label={"Age gate +£195"}
+              label={"Age gate +£255"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={480}
+              price={340}
               name={"Q72 File sharing"}
-              label={"File sharing +£480"}
+              label={"File sharing +£340"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={480}
+              price={510}
               name={"Q72 Booking schedule"}
-              label={"Booking schedule +£480"}
+              label={"Booking schedule +£510"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={130}
+              price={170}
               name={"Q72 Contact form"}
-              label={"Contact form +£130"}
+              label={"Contact form +£170"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={130}
+              price={170}
               name={"Q72 Social media feed"}
-              label={"Social media feed +£130"}
+              label={"Social media feed +£170"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={130}
+              price={170}
               name={"Q72 Live support chat"}
-              label={"Live support chat +£130"}
+              label={"Live support chat +£170"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={130}
+              price={510}
               name={"Q72 Event calendar"}
-              label={"Event calendar +£480"}
+              label={"Event calendar +£510"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
           </li>
           <li>
             <SingleCheckBtn
-              price={130}
+              price={170}
               name={"Q72 Branded Google Map"}
-              label={"Branded Google Map +£130"}
+              label={"Branded Google Map +£170"}
               storePrices={storePrices}
               setStorePrices={setStorePrices}
             />
