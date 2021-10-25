@@ -20,9 +20,9 @@ const LetsStart = () => {
       animate="show"
       exit="exit"
     >
-      <QuestionTitle>We are website experts specialising in Shopify eCommerce and Wordpress platform.</QuestionTitle>
+      <QuestionTitle>We are website experts specialising in Shopify eCommerce and Wordpress platforms.</QuestionTitle>
       <p>
-        Our understanding of the design and website development process comes from years of experience working with a variety of clients from a range of industries. Our quick quote tool is for project price guidance only, and one of our consultants will we in touch to advise on an appropriate budget for your project. As a guide, our projects generally starting at £10k, depending on complexity.
+        Our understanding of the design and website development process comes from years of experience working with a variety of clients and industries. Our quick quote tool is a project price guidance only, and one of our consultants will we in touch soon to advise on an appropriate budget for your unique project. As a guide, our projects generally start at £10k, depending on complexity.
       </p>
       <Link to="/need-branding">
         <Button onClick={forwardAnime}>

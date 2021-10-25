@@ -27,7 +27,7 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
       exit="exit"
     >
       <QuestionTitle>
-        How many pages/sections will your website have?
+        How would you gauge the size and complexity of your project?
       </QuestionTitle>
       <p>
         Common pages include Homepage, About us, Our Services, Contact us etc.

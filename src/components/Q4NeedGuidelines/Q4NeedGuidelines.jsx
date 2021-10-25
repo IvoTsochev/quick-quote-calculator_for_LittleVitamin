@@ -28,7 +28,7 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices, name }) => {
       animate="show"
       exit="exit"
     >
-      <QuestionTitle>Do you need a brand toolkit to share with digital, design, marketing or PR agencies?</QuestionTitle>
+      <QuestionTitle>Do you need a brand tool kit to share with digital, design marketing or PR agencies?</QuestionTitle>
       <Link to="/selling-products">
         <Button
           value="1000"
