@@ -20,13 +20,9 @@ const LetsStart = () => {
       animate="show"
       exit="exit"
     >
-      <QuestionTitle>An estimate for your new website?</QuestionTitle>
+      <QuestionTitle>We are website experts specialising in Shopify eCommerce and Wordpress platform.</QuestionTitle>
       <p>
-        We are Wordpress and Shopify experts. Our understanding of both design
-        and website development comes from years of experience working with a
-        variety of clients through our London based team. *The prices you see
-        are for your guide only, please speak to a member of our team for an
-        accurate quote based on your requirements.
+        Our understanding of the design and website development process comes from years of experience working with a variety of clients from a range of industries. Our quick quote tool is for project price guidance only, and one of our consultants will we in touch to advise on an appropriate budget for your project. As a guide, our projects generally starting at £10k, depending on complexity.
       </p>
       <Link to="/need-branding">
         <Button onClick={forwardAnime}>

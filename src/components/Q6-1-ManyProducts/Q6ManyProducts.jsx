@@ -32,6 +32,29 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
         project.
       </p>
       <Link to="/q71additional-func">
+
+        <Button
+          value="7000"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Standard
+        </Button>
+
+        <Button
+          value="12000"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Premium
+        </Button>
+
         <Button
           value="0"
           onClick={(e) => {
@@ -40,28 +63,20 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
           }}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          0-20
+          Advanced
         </Button>
+
         <Button
-          value="2500"
+          value="7000"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          21-100
+          Not sure
         </Button>
-        <Button
-          value="6500"
-          onClick={(e) => {
-            forwardAnime();
-            getPriceHandler(e);
-          }}
-        >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          100+
-        </Button>
+
       </Link>
     </motion.div>
   );
