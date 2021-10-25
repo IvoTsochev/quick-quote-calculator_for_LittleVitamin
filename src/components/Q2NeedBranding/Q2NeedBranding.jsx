@@ -40,7 +40,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
             forwardAnime();
             getPriceHandler(e);
           }}
-          value="750"
+          value="1275"
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />
           Yes, I need branding

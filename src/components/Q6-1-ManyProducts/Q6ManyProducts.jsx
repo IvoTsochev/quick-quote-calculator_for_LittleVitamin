@@ -34,7 +34,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
       <Link to="/q71additional-func">
 
         <Button
-          value="7000"
+          value="8000"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
@@ -45,7 +45,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
         </Button>
 
         <Button
-          value="12000"
+          value="16000"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
@@ -56,7 +56,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
         </Button>
 
         <Button
-          value="0"
+          value="24000"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);

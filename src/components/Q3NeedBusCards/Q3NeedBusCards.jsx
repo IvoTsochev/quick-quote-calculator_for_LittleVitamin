@@ -33,7 +33,7 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
       </QuestionTitle>
       <Link to="/need-guidelines">
         <Button
-          value="750"
+          value="1275"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);

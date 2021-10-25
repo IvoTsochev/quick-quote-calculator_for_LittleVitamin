@@ -36,6 +36,26 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
       </p>
       <Link to="/q72additional-func">
         <Button
+          value="7000"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Standart
+        </Button>
+        <Button
+          value="12000"
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Premium
+        </Button>
+        <Button
           value="0"
           onClick={(e) => {
             forwardAnime();
@@ -43,27 +63,7 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
           }}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          1-5
-        </Button>
-        <Button
-          value="2500"
-          onClick={(e) => {
-            forwardAnime();
-            getPriceHandler(e);
-          }}
-        >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          6-11
-        </Button>
-        <Button
-          value="5000"
-          onClick={(e) => {
-            forwardAnime();
-            getPriceHandler(e);
-          }}
-        >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          12+
+          Advanced
         </Button>
       </Link>
     </motion.div>

@@ -31,7 +31,7 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices, name }) => {
       <QuestionTitle>Do you need a brand tool kit to share with digital, design marketing or PR agencies?</QuestionTitle>
       <Link to="/selling-products">
         <Button
-          value="1000"
+          value="850"
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);

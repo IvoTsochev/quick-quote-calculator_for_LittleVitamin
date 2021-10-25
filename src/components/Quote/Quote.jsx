@@ -10,15 +10,15 @@ const Quote = ({ totalPrice, storePrices }) => {
   // checking the client choices and putting them into new object quoteObject
   for (const key in storePrices) {
     if (key === "Need Branding" && storePrices[key] !== 0) {
-      quoteObject["Q2"] = "Basic Branding Package £750";
+      quoteObject["Q2"] = "Standart Branding Package £1,275";
     }
 
     if (key === "Need business cards" && storePrices[key] !== 0) {
-      quoteObject["Q2"] = "Premium Branding Package £1,500";
+      quoteObject["Q2"] = "Premium Branding Package £2,550";
     }
 
     if (key === "Need Guidelines" && storePrices[key] !== 0) {
-      quoteObject["Q2"] = "Platinum Branding Package £2,500";
+      quoteObject["Q2"] = "Platinum Branding Package £3,400";
     }
 
     if (key === "You be selling products?" && storePrices[key] === 3500) {
