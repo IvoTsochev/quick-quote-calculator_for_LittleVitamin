@@ -71,7 +71,7 @@ function App() {
   return (
     <div className={`app ${contactPage ? 'mobile-app' : ''}`}>
       <a href='https://lv2.littlevitamindevelopment.com'>
-        <img className='pill-logo' src={pill_logo}  alt="White-Pill_Square" />
+        <img className='pill-logo' src={pill_logo} alt="White-Pill_Square" />
       </a>
       <video className="videoBg" autoPlay loop muted>
         <source src={videoBg} type="video/mp4" />
@@ -105,7 +105,7 @@ function App() {
               <Q4NeedGuidelines
                 storePrices={storePrices}
                 setStorePrices={setStorePrices}
-                name={"Need Guidelines"}
+                name={"Need a Brand Tool"}
               />
             </Route>
 
@@ -158,7 +158,7 @@ function App() {
         </AnimatePresence>
       </div>
       {/* END Main area */}
-      
+
       {/* Calc area */}
       <div className="app-calc">
         <FontAwesomeIcon

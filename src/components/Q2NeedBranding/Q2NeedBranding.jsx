@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { forwardAnime } from "../../util";
+// Helpers
+import { prices } from '../../helpers/prices';
 // Styles
 import "./Q2NeedBranding.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -12,12 +14,25 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 
 const NeedBranding = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBranding = e.target.value;
     storePrices[name] = Number(priceNeedBranding);
   };
   // END getting the price
+
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
+
 
   return (
     <motion.div
@@ -40,7 +55,8 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
             forwardAnime();
             getPriceHandler(e);
           }}
-          value="1275"
+          value={prices.Q2_Yes}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />
           Yes, I need branding
@@ -53,7 +69,8 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
             forwardAnime();
             getPriceHandler(e);
           }}
-          value="0"
+          value={prices.Q2_No}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} />
           No thanks

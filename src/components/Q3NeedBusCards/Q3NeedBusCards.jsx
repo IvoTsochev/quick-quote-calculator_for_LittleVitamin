@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Helpers
+import { prices } from '../../helpers/prices';
 // Styles
 import { Button, QuestionTitle } from "../../globalStyling";
 import "./Q3NeedBusCards.css";
@@ -13,12 +15,23 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBusCards = e.target.value;
     storePrices[name] = Number(priceNeedBusCards);
   };
   // END getting the price
+
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
 
   return (
     <motion.div
@@ -33,22 +46,24 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
       </QuestionTitle>
       <Link to="/need-guidelines">
         <Button
-          value="1275"
+          value={prices.Q3_Yes}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           YES
         </Button>
 
         <Button
-          value="0"
+          value={prices.Q3_No}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
         </Button>

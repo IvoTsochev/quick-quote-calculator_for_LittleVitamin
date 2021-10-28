@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Helpers
+import { prices } from '../../helpers/prices'
 // Components
 import SingleCheckBtn from "../SingleCheckBtn/SingleCheckBtn";
 // Styles
@@ -32,7 +34,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
         <ul className="ks-cboxtags">
           <li>
             <SingleCheckBtn
-              price={170}
+              price={prices.Q72_Photo_gallery}
               name={"Q72 Photo gallery"}
               label={"Photo gallery +£170"}
               storePrices={storePrices}
@@ -41,7 +43,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={170}
+              price={prices.Q72_Newsletter_sign_up}
               name={"Q72 Newsletter sign-up"}
               label={"Newsletter sign-up +£170"}
               storePrices={storePrices}
@@ -50,7 +52,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={255}
+              price={prices.Q72_Video_content}
               name={"Q72 Video content"}
               label={"Video content £255"}
               storePrices={storePrices}
@@ -59,7 +61,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={255}
+              price={prices.Q72_Age_gate}
               name={"Q72 Age gate"}
               label={"Age gate +£255"}
               storePrices={storePrices}
@@ -68,7 +70,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={340}
+              price={prices.Q72_File_sharing}
               name={"Q72 File sharing"}
               label={"File sharing +£340"}
               storePrices={storePrices}
@@ -77,7 +79,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={510}
+              price={prices.Q72_Booking_schedule}
               name={"Q72 Booking schedule"}
               label={"Booking schedule +£510"}
               storePrices={storePrices}
@@ -86,7 +88,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={170}
+              price={prices.Q72_Contact_form}
               name={"Q72 Contact form"}
               label={"Contact form +£170"}
               storePrices={storePrices}
@@ -95,7 +97,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={170}
+              price={prices.Q72_Social_media_feed}
               name={"Q72 Social media feed"}
               label={"Social media feed +£170"}
               storePrices={storePrices}
@@ -104,7 +106,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={170}
+              price={prices.Q72_Live_support_chat}
               name={"Q72 Live support chat"}
               label={"Live support chat +£170"}
               storePrices={storePrices}
@@ -113,7 +115,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={510}
+              price={prices.Q72_Event_calendar}
               name={"Q72 Event calendar"}
               label={"Event calendar +£510"}
               storePrices={storePrices}
@@ -122,7 +124,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
           </li>
           <li>
             <SingleCheckBtn
-              price={170}
+              price={prices.Q72_Branded_Google_Map}
               name={"Q72 Branded Google Map"}
               label={"Branded Google Map +£170"}
               storePrices={storePrices}

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Helpers
+import { prices } from '../../helpers/prices';
 // Styles
 import "./Q6ManyProducts.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -11,12 +13,23 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const ManyProducts = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceManyProducts = e.target.value;
     storePrices[name] = Number(priceManyProducts);
   };
   // END getting the price
+
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
 
   return (
     <motion.div
@@ -28,50 +41,53 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
     >
       <QuestionTitle>How would you gauge the size and complexity of your eCommerce project?</QuestionTitle>
       <p>
-        This number is a huge factor in determining the size of your store and
-        project.
+        The complexity of your project is an essential factor in determining the size of your projec.
       </p>
       <Link to="/q71additional-func">
 
         <Button
-          value="8000"
+          value={prices.Q61_Standart}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Standard
         </Button>
 
         <Button
-          value="16000"
+          value={prices.Q61_Premium}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Premium
         </Button>
 
         <Button
-          value="24000"
+          value={prices.Q61_Advanced}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Advanced
         </Button>
 
         <Button
-          value="7000"
+          value={prices.Q61_NotSure}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Not sure

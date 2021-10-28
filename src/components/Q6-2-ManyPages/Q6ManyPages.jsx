@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { prices } from '../../helpers/prices';
 // Styles
 import "./Q6ManyPages.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -11,12 +12,23 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceManyPages = e.target.value;
     storePrices[name] = Number(priceManyPages);
   };
   // END getting the price
+
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
 
   return (
     <motion.div
@@ -30,41 +42,58 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
         How would you gauge the size and complexity of your project?
       </QuestionTitle>
       <p>
-        Common pages include Homepage, About us, Our Services, Contact us etc.
-        The content can also be arranged into different sections on a single
-        page layout.
+        The complexity of your project is an essential factor in determining the size of your project.
       </p>
       <Link to="/q72additional-func">
+
         <Button
-          value="7000"
+          value={prices.Q62_Standard}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Standart
         </Button>
+
         <Button
-          value="12000"
+          value={prices.Q62_Premium}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Premium
         </Button>
+
         <Button
-          value="0"
+          value={prices.Q62_Advanced}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Advanced
         </Button>
+
+        <Button
+          value={prices.Q62_NotSure}
+          onClick={(e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          }}
+          disabled={isBtnDisabled}
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          Not sure
+        </Button>
+
       </Link>
     </motion.div>
   );

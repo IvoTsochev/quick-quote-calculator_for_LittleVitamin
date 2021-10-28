@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Helpers
+import { prices } from '../../helpers/prices'
 // Styles
 import "./Q5SellingProducts.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -13,12 +15,23 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceSellingProducts = e.target.value;
     storePrices[name] = Number(priceSellingProducts);
   };
   // END getting the price
+
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
 
   return (
     <motion.div
@@ -39,11 +52,12 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
       </p>
       <Link to="/many-products">
         <Button
-          value="3500"
+          value={prices.Q5_Yes}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Yes, I will be selling
@@ -52,11 +66,12 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
 
       <Link to="/many-pages">
         <Button
-          value="0"
+          value={prices.Q5_No}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> Nope
         </Button>
