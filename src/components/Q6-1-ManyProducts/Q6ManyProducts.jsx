@@ -34,7 +34,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
   return (
     <motion.div
       className="many-products page"
-      variants={pageAnimation}
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -46,50 +46,50 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
       <Link to="/q71additional-func">
 
         <Button
-          value={prices.Q61_Standart}
-          onClick={(e) => {
+          value={ prices.Q61_Standard }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           Standard
         </Button>
 
         <Button
-          value={prices.Q61_Premium}
-          onClick={(e) => {
+          value={ prices.Q61_Premium }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           Premium
         </Button>
 
         <Button
-          value={prices.Q61_Advanced}
-          onClick={(e) => {
+          value={ prices.Q61_Advanced }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           Advanced
         </Button>
 
         <Button
-          value={prices.Q61_NotSure}
-          onClick={(e) => {
+          value={ prices.Q61_NotSure }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           Not sure
         </Button>
 

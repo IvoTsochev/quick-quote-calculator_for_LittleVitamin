@@ -20,7 +20,7 @@ const Quote = ({ totalPrice, storePrices }) => {
     }
 
     if (key === "Need a Brand Tool" && storePrices[key] !== 0) {
-      quoteObject["Q2"] = "Platinum Branding Package £3,400";
+      quoteObject["Q2"] = "Advanced Branding Package £3,400";
     }
 
     if (key === "You be selling products?" && storePrices[key] === 8000) {
@@ -54,10 +54,10 @@ const Quote = ({ totalPrice, storePrices }) => {
       quoteObject["Q71ad2"] = `+ Product reviews +£${prices.Q71_Product_reviews}`;
     }
     if (key === "Q71 Marketplace" && storePrices[key] !== 0) {
-      quoteObject["Q71ad3"] = `+ Marketplace +£0`;
+      quoteObject["Q71ad3"] = `+ Marketplace +£poa`;
     }
     if (key === "Q71 Subscription Flow" && storePrices[key] !== 0) {
-      quoteObject["Q71ad4"] = "+ Subscription Flow +£0";
+      quoteObject["Q71ad4"] = "+ Subscription Flow +£poa";
     }
     if (key === "Q71 Other features" && storePrices[key] !== 0) {
       quoteObject["Q71ad5"] = "+ Other features +£195";
@@ -81,7 +81,7 @@ const Quote = ({ totalPrice, storePrices }) => {
       quoteObject["Q71ad11"] = "+ Currency converter +£260";
     }
     if (key === "Q71 Subscription model" && storePrices[key] !== 0) {
-      quoteObject["Q71ad12"] = `+ Subscription model +£0`;
+      quoteObject["Q71ad12"] = `+ Subscription model +£poa`;
     }
     if (key === "Q71 Advanced Product filtering" && storePrices[key] !== 0) {
       quoteObject["Q71ad13"] = `+ Advanced Product filtering +£${prices.Q71_Product_filtering}`;
