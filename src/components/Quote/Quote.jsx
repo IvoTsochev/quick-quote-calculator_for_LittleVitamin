@@ -140,17 +140,17 @@ const Quote = ({ totalPrice, storePrices }) => {
       </div>
 
       <div className="quoteArr">
-        {/* iterating through the new arr and displaying the values */}
-        {quoteListArr.map((el) => (
-          <QuoteListing name={el} />
-        ))}
+        {/* iterating through the new arr and displaying the values */ }
+        { quoteListArr.map((el) => (
+          <QuoteListing name={ el } />
+        )) }
       </div>
 
       <div className="quote-total">
         <hr />
         <div className="quote-total-inner">
           <h2>Total</h2>
-          <p className="quote-total-price">£{Math.round(totalPrice)}</p>
+          <p className="quote-total-price">£{ Math.round(totalPrice) }</p>
         </div>
       </div>
     </div>
