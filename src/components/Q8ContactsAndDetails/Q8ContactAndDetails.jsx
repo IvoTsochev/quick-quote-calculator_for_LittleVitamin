@@ -14,7 +14,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   const [isSent, setIsSent] = useState(undefined);
 
   // Client choices | passed to the hiddne input field
-  let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join('%3C%2Fbr%3E');
+  let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join('<br>');
 
 
   // Initiating the contact form || https://www.emailjs.com/
@@ -28,7 +28,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   // let userIdEmailJs = "user_t00SWW3rzOZdhMddvrdir";
   let userIdEmailJs = 'user_Q3E8qwuyQdkc3P6iQvNwh';
 
-  function sendEmail(e) {
+  function sendEmail (e) {
     e.preventDefault();
 
     setIsSent(true)
@@ -56,7 +56,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   return (
     <motion.div
       className="contacts-and-details page"
-      variants={pageAnimation}
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -64,19 +64,19 @@ const Q8ContactAndDetails = ({ storePrices }) => {
 
 
 
-      {!isSent ? (
+      { !isSent ? (
         <div className="forms-container">
 
 
-          <form className="contact-form" onSubmit={sendEmail}>
+          <form className="contact-form" onSubmit={ sendEmail }>
             <QuestionTitle>
               Help us to provide you with a more accurate estimate.
-         </QuestionTitle>
+            </QuestionTitle>
             <p>
               Write us a simple site brief and list out any special requiremenents
               that haven't yet been covered.
-         </p>
-            {/* Textarea */}
+            </p>
+            {/* Textarea */ }
             <textarea
               className="contact-message"
               placeholder="Message"
@@ -86,19 +86,19 @@ const Q8ContactAndDetails = ({ storePrices }) => {
             />
             <QuestionTitle>
               Please provide us with some information about you?
-         </QuestionTitle>
+            </QuestionTitle>
             <div className="contact-first-row">
-              {/* Client preferences passed to the form */}
-              <input type="hidden" name="clientPreferences" value={clientPreferences} />
+              {/* Client preferences passed to the form */ }
+              <input type="hidden" name="clientPreferences" value={ clientPreferences } />
 
-              {/* Name */}
+              {/* Name */ }
               <input
                 className="contact-name"
                 type="text"
                 placeholder="Name"
                 name="name"
               />
-              {/* Email Address */}
+              {/* Email Address */ }
               <input
                 className="contact-email"
                 type="email"
@@ -108,14 +108,14 @@ const Q8ContactAndDetails = ({ storePrices }) => {
             </div>
 
             <div className="contact-second-row">
-              {/* Phone Number */}
+              {/* Phone Number */ }
               <input
                 className="telephone-number"
                 type="text"
                 placeholder="Telephone Number"
                 name="phone"
               />
-              {/* Country */}
+              {/* Country */ }
               <input
                 className="contact-country"
                 type="text"
@@ -123,7 +123,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
                 name="country"
               />
 
-              {/* Coupon Code */}
+              {/* Coupon Code */ }
               <input
                 className="contact-coupon"
                 type="text"
@@ -140,13 +140,13 @@ const Q8ContactAndDetails = ({ storePrices }) => {
           </form>
         </div>
       ) : (
-          <LoadingSpinner />
-        )}
+        <LoadingSpinner />
+      ) }
 
 
-      {isSent && (
+      { isSent && (
         <Redirect to='/thankyou' />
-      )}
+      ) }
 
 
 

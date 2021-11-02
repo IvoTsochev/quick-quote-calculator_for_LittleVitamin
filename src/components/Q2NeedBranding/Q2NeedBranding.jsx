@@ -33,11 +33,19 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
   }, [setIsBtnDisabled])
   // END Delay button activity
 
+  const clearNextAnswers = () => {
+    console.log('nope is clikced');
+    delete storePrices['Need business cards'];
+    delete storePrices['Need a Brand Tool'];
+    delete storePrices['You be selling products?'];
+
+  }
+
 
   return (
     <motion.div
       className="need-branding page"
-      variants={pageAnimation}
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -51,28 +59,29 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
       </p>
       <Link to="/need-business-cards">
         <Button
-          onClick={(e) => {
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          value={prices.Q2_Yes}
-          disabled={isBtnDisabled}
+          } }
+          value={ prices.Q2_Yes }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />
           Yes, I need branding
         </Button>
       </Link>
 
       <Link to="/selling-products">
         <Button
-          onClick={(e) => {
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          value={prices.Q2_No}
-          disabled={isBtnDisabled}
+            clearNextAnswers();
+          } }
+          value={ prices.Q2_No }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faCircle} />
+          <FontAwesomeIcon className="btn-arrow" icon={ faCircle } />
           No thanks
         </Button>
       </Link>
