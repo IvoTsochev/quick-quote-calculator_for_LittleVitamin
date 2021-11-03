@@ -150,7 +150,8 @@ const Quote = ({ totalPrice, storePrices }) => {
         <hr />
         <div className="quote-total-inner">
           <h2>Total</h2>
-          <p className="quote-total-price">£{ Math.round(totalPrice) }</p>
+          {/* <p className="quote-total-price">£{ Math.round(totalPrice) }</p> */ }
+          <p className="quote-total-price">£{ totalPrice && Math.round(totalPrice) }</p>
         </div>
       </div>
     </div>
