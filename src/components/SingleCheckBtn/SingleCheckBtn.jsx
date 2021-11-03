@@ -27,10 +27,10 @@ const SingleCheckBtn = ({
   return (
     <div className="single-check-btn">
       <CheckBtn
-        style={isClicked ? { opacity: "100%" } : { opacity: "50%" }}
-        onClick={handleClick}
+        // style={isClicked ? { opacity: "100%" } : { opacity: "50%" }}
+        onClick={ handleClick }
       >
-        {label}
+        { label }
       </CheckBtn>
     </div>
   );
