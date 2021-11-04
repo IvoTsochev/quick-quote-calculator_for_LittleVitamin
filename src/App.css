@@ -7,37 +7,38 @@
 }
 
 @font-face {
-  font-family: 'Visby-light';
+  font-family: "Visby-light";
   src: url(./Fonts/VisbyCF-Light.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Visby CF';
+  font-family: "Visby CF";
   src: url(./Fonts/VisbyCF-Medium.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Visby-bold';
+  font-family: "Visby-bold";
   src: url(./Fonts/VisbyCF-Bold.woff) format("woff");
 }
 
-p, h3 {
-  font-family: 'Visby CF', sans-serif;
+p,
+h3 {
+  font-family: "Visby CF", sans-serif;
   font-size: 19px;
   font-weight: 200;
   line-height: 24px;
 }
 
 h2 {
-  font-family: 'Visby CF', sans-serif;
+  font-family: "Visby CF", sans-serif;
   font-weight: 900;
   font-size: 28px;
-  line-height: 52px;
+  line-height: 1.2em;
   text-align: left !important;
 }
 
 button {
-  font-family: 'Visby CF', sans-serif;
+  font-family: "Visby CF", sans-serif;
   font-weight: 200;
   font-size: 15px;
   line-height: 15px;
@@ -205,7 +206,7 @@ body {
     width: 100%;
   }
   .app .app-calc .app-calc-stats .quote .quoteArr {
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .app #showCalcArea {
     display: block;
@@ -276,7 +277,7 @@ body {
     width: 100%;
   }
   .app .app-calc .app-calc-stats .quote .quoteArr {
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .app #showCalcArea {
     display: block;
@@ -347,7 +348,7 @@ body {
     width: 100%;
   }
   .app .app-calc .app-calc-stats .quote .quoteArr {
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .app #showCalcArea {
     display: block;
@@ -412,7 +413,7 @@ body {
     width: 100%;
   }
   .app .app-calc .app-calc-stats .quote .quoteArr {
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .app #showCalcArea {
     display: block;
