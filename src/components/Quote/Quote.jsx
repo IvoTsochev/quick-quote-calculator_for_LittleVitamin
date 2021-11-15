@@ -32,9 +32,9 @@ const Quote = ({ totalPrice, storePrices }) => {
     if (key === "How Many Products" && storePrices[key] === 0) {
       quoteObject["Q3"] = "Standard eCommerce Website Package £8,000";
     } else if (key === "How Many Products" && storePrices[key] === 8000) {
-      quoteObject["Q3"] = `Premium eCommerce Website Package £16000`;
+      quoteObject["Q3"] = `Premium eCommerce Website Package £16,000`;
     } else if (key === "How Many Products" && storePrices[key] === 16000) {
-      quoteObject["Q3"] = `Advanced eCommerce Website Package £24000`;
+      quoteObject["Q3"] = `Advanced eCommerce Website Package £24,000`;
     } else if (key === "How Many Products" && storePrices[key] === 0) {
       quoteObject["Q3"] = `Advanced eCommerce Website Package £8,000`;
     }
@@ -151,7 +151,7 @@ const Quote = ({ totalPrice, storePrices }) => {
         <div className="quote-total-inner">
           <h2>Total</h2>
           {/* <p className="quote-total-price">£{ Math.round(totalPrice) }</p> */ }
-          <p className="quote-total-price">£{ totalPrice && Math.round(totalPrice) }</p>
+          <p className="quote-total-price">£{ totalPrice && Math.round(totalPrice).toLocaleString() }</p>
         </div>
       </div>
     </div>
