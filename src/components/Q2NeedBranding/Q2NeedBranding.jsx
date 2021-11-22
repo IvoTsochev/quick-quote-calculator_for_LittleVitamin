@@ -34,7 +34,6 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
   // END Delay button activity
 
   const clearNextAnswers = () => {
-    console.log('nope is clikced');
     delete storePrices['Need business cards'];
     delete storePrices['Need a Brand Tool'];
     delete storePrices['You be selling products?'];

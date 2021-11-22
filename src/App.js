@@ -1,3 +1,5 @@
+// Utils
+// import handleCursor from './helpers/cursorStyle';
 import { useState, useEffect } from "react";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 // Styles
@@ -23,6 +25,8 @@ import Quote from "./components/Quote/Quote";
 import videoBg from "./img/LV-AN01-sonic-ident-1280x720-1.mp4";
 import ThankYou from './components/ThankYou/ThankYou';
 import pill_logo from './img/White-Pill_Square.png'
+
+// handleCursor();
 
 function App () {
   let location = useLocation();
@@ -70,7 +74,7 @@ function App () {
 
   return (
     <div className={ `app ${contactPage ? 'mobile-app' : ''}` }>
-      <a href='https://lv2.littlevitamindevelopment.com'>
+      <a href='https://vitamincommerce.com'>
         <img className='pill-logo' src={ pill_logo } alt="White-Pill_Square" />
       </a>
       <video className="videoBg" autoPlay loop muted>

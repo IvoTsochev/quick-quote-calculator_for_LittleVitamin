@@ -127,10 +127,8 @@ const Quote = ({ totalPrice, storePrices }) => {
   // extracting only values from the new object quoteObject and putting them into new arr quoteListArr
   for (const [key, value] of Object.entries(quoteObject)) {
     quoteListArr.push(value);
-    console.log(key);
   }
 
-  console.log(quoteListArr);
 
   return (
     <div className="quote">
