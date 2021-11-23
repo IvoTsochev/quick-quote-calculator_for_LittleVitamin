@@ -150,11 +150,13 @@ const Q8ContactAndDetails = ({ storePrices }) => {
               />
             </div>
 
-            <input
+            <button
               className="contact-submit"
               type="submit"
               value="Send"
-            />
+            >
+              Send
+            </button>
           </form>
         </div>
       ) : (
