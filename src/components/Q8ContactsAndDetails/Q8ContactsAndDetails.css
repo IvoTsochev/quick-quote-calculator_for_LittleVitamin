@@ -1,0 +1,175 @@
+.needsclick .dSHJfZ.dSHJfZ.dSHJfZ.dSHJfZ.dSHJfZ.dSHJfZ {
+  border-radius: 50px !important;
+  background-color: transparent;
+}
+
+.contacts-and-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contacts-and-details .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-and-details .contact-form textarea {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.contacts-and-details .contact-form textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form textarea:-ms-input-placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form textarea::-ms-input-placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form textarea::placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form input {
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.contacts-and-details .contact-form input::-webkit-input-placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form input:-ms-input-placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form input::-ms-input-placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form input::placeholder {
+  color: white;
+}
+
+.contacts-and-details .contact-form input:focus {
+  border: none;
+  outline: none;
+}
+
+.contacts-and-details .contact-form .contact-first-row {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-and-details .contact-form .contact-first-row .contact-name {
+  margin-right: 1rem;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+
+.contacts-and-details .contact-form .contact-first-row .contact-email {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+
+.contacts-and-details .contact-form .contact-second-row {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-and-details .contact-form .contact-second-row .telephone-number {
+  margin-right: 1rem;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+
+.contacts-and-details .contact-form .contact-second-row .contact-country {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  margin-right: 1rem;
+}
+
+.contacts-and-details .contact-form .contact-submit {
+  border: 2px solid white;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 30px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.contacts-and-details .contact-form .contact-submit:hover {
+  background-color: white;
+  color: #000;
+}
+
+@media (max-width: 500px) {
+  .contacts-and-details {
+    position: relative;
+    padding: 0rem 1rem;
+  }
+  .contacts-and-details .contact-form textarea {
+    width: 100%;
+  }
+  .contacts-and-details .contact-form .contact-first-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts-and-details .contact-form .contact-first-row .contact-name {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+  .contacts-and-details .contact-form .contact-second-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts-and-details .contact-form .contact-second-row .telephone-number {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+  .contacts-and-details .contact-form .contact-second-row .contact-country {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=Q8ContactsAndDetails.css.map */

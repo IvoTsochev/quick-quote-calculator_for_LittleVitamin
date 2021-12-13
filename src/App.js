@@ -1,7 +1,9 @@
+// Utils
+// import handleCursor from './helpers/cursorStyle';
 import { useState, useEffect } from "react";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 // Styles
-import "./App.scss";
+import "./App.css";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Animation
@@ -22,21 +24,28 @@ import Q8ContactAndDetails from "./components/Q8ContactsAndDetails/Q8ContactAndD
 import Quote from "./components/Quote/Quote";
 import videoBg from "./img/LV-AN01-sonic-ident-1280x720-1.mp4";
 import ThankYou from './components/ThankYou/ThankYou';
-import pill_logo from './img/White-Pill_Square.png'
+import pill_logo from './img/White-Pill_Square.png';
 
-function App() {
+
+function App () {
   let location = useLocation();
+
 
   let lastPage = false;
   if (location.pathname === '/thankyou') {
     lastPage = true;
   }
 
-  console.log(lastPage);
+  let contactPage = false;
+  if (location.pathname === '/contacts-and-details') {
+    contactPage = true;
+  }
+
 
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
   const [storePrices, setStorePrices] = useState({});
+
 
   // suming the total price from storePrices object
   let sumAllArr = Object.values(storePrices);
@@ -65,108 +74,121 @@ function App() {
   // END handling the GoBack and Forward animation
 
   return (
-    <div className="app">
-      <a href='https://lv2.littlevitamindevelopment.com'>
-        <img className='pill-logo' src={pill_logo}  alt="White-Pill_Square" />
+    <div className={ `app ${contactPage ? 'mobile-app' : ''}` }>
+      <a href='https://vitamincommerce.com'>
+        <img className='pill-logo' src={ pill_logo } alt="White-Pill_Square" />
       </a>
       <video className="videoBg" autoPlay loop muted>
-        <source src={videoBg} type="video/mp4" />
+        <source src={ videoBg } type="video/mp4" />
       </video>
+      {/* Main area */ }
       <div className="app-main">
+
         <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.pathname}>
+          <Switch location={ location } key={ location.pathname }>
+
+
             <Route path="/" exact>
               <Q1LetsStart />
             </Route>
 
+
             <Route path="/need-branding">
               <Q2NeedBranding
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
-                name={"Need Branding"}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
+                name={ "Need Branding" }
               />
             </Route>
 
             <Route path="/need-business-cards">
               <Q3NeedBusCards
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
-                name={"Need business cards"}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
+                name={ "Need business cards" }
               />
             </Route>
 
             <Route path="/need-guidelines">
               <Q4NeedGuidelines
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
-                name={"Need Guidelines"}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
+                name={ "Need a Brand Tool" }
               />
             </Route>
 
             <Route path="/selling-products">
               <Q5SellingProducts
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
-                name={"You be selling products?"}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
+                name={ "You be selling products?" }
               />
             </Route>
 
             <Route path="/many-products">
               <Q6ManyProducts
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
-                name={"How Many Products"}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
+                name={ "How Many Products" }
               />
             </Route>
 
             <Route path="/many-pages">
               <Q6ManyPages
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
-                name={"How Many Pages"}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
+                name={ "How Many Pages" }
               />
             </Route>
 
             <Route path="/q71additional-func">
               <Q71AdditionalFunc
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
               />
             </Route>
 
             <Route path="/q72additional-func">
               <Q72AdditionalFunc
-                storePrices={storePrices}
-                setStorePrices={setStorePrices}
+                storePrices={ storePrices }
+                setStorePrices={ setStorePrices }
               />
             </Route>
 
             <Route path="/contacts-and-details">
-              <Q8ContactAndDetails storePrices={storePrices} />
+              <Q8ContactAndDetails storePrices={ storePrices } />
             </Route>
 
             <Route path='/thankyou'>
-              <ThankYou />
+              <ThankYou storePrices={ storePrices } />
             </Route>
+
+
+
           </Switch>
         </AnimatePresence>
       </div>
+      {/* END Main area */ }
+
+      {/* Calc area */ }
       <div className="app-calc">
         <FontAwesomeIcon
-          onClick={goBackHandler}
+          onClick={ goBackHandler }
           className="goBack-btn-arrow"
-          icon={faArrowUp}
+          icon={ faArrowUp }
         />
         <FontAwesomeIcon
-          onClick={goForwardHandler}
-          className={`goForward-btn-arrow ${lastPage ? 'hideArrow' : ''}`}
-          icon={faArrowDown}
+          onClick={ goForwardHandler }
+          className={ `goForward-btn-arrow ${lastPage ? 'hideArrow' : ''}` }
+          icon={ faArrowDown }
         />
 
-        <div className="app-calc-stats">
-          <Quote totalPrice={totalPrice} storePrices={storePrices} />
+        <div className="app-calc-stats" id={ `${contactPage ? 'showCalcArea' : ''}` }>
+          <Quote totalPrice={ totalPrice } storePrices={ storePrices } />
         </div>
       </div>
+      {/* END Calc area */ }
+
     </div>
   );
 }

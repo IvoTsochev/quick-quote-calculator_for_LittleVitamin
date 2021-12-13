@@ -17,6 +17,17 @@
   }
   .quoteArr {
     width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgb(155, 155, 155);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(255, 255, 255);
+    }
   }
   .quote-total {
     width: 100%;

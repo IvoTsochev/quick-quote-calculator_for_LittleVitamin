@@ -71,13 +71,17 @@
       border: 2px solid white;
       border-radius: 5px;
       transition: all 0.3s ease;
+
+      height: 30px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
       &:hover {
         background-color: white;
         color: #000;
       }
     }
   }
-
 }
 
 @media (max-width: 500px) {

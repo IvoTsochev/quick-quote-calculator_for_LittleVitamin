@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { prices } from '../../helpers/prices';
 // Styles
-import "./Q6ManyPages.scss";
+import "./Q6ManyPages.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +12,9 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceManyPages = e.target.value;
@@ -18,53 +22,78 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
   };
   // END getting the price
 
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
+
   return (
     <motion.div
-      className="many-pages"
-      variants={pageAnimation}
+      className="many-pages page"
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
     >
       <QuestionTitle>
-        How many pages/sections will your website have?
+        How would you gauge the size and complexity of your project?
       </QuestionTitle>
       <p>
-        Common pages include Homepage, About us, Our Services, Contact us etc.
-        The content can also be arranged into different sections on a single
-        page layout.
+        The complexity of your project is an essential factor in determining the size of your project.
       </p>
       <Link to="/q72additional-func">
+
         <Button
-          value="0"
-          onClick={(e) => {
+          value={ prices.Q62_Standard }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          1-5
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
+          Standard
         </Button>
+
         <Button
-          value="2500"
-          onClick={(e) => {
+          value={ prices.Q62_Premium }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          6-11
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
+          Premium
         </Button>
+
         <Button
-          value="5000"
-          onClick={(e) => {
+          value={ prices.Q62_Advanced }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
-          12+
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
+          Advanced
         </Button>
+
+        <Button
+          value={ prices.Q62_NotSure }
+          onClick={ (e) => {
+            forwardAnime();
+            getPriceHandler(e);
+          } }
+          disabled={ isBtnDisabled }
+        >
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
+          Not sure
+        </Button>
+
       </Link>
     </motion.div>
   );

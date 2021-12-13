@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { forwardAnime } from "../../util";
+// Helpers
+import { prices } from '../../helpers/prices';
 // Styles
-import "./Q2NeedBranding.scss";
+import "./Q2NeedBranding.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
@@ -12,6 +14,10 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 
 const NeedBranding = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBranding = e.target.value;
@@ -19,10 +25,26 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
   };
   // END getting the price
 
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
+
+  const clearNextAnswers = () => {
+    delete storePrices['Need business cards'];
+    delete storePrices['Need a Brand Tool'];
+    delete storePrices['You be selling products?'];
+
+  }
+
+
   return (
     <motion.div
-      className="need-branding"
-      variants={pageAnimation}
+      className="need-branding page"
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -36,26 +58,29 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
       </p>
       <Link to="/need-business-cards">
         <Button
-          onClick={(e) => {
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          value="750"
+          } }
+          value={ prices.Q2_Yes }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />
           Yes, I need branding
         </Button>
       </Link>
 
       <Link to="/selling-products">
         <Button
-          onClick={(e) => {
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          value="0"
+            clearNextAnswers();
+          } }
+          value={ prices.Q2_No }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faCircle} />
+          <FontAwesomeIcon className="btn-arrow" icon={ faCircle } />
           No thanks
         </Button>
       </Link>

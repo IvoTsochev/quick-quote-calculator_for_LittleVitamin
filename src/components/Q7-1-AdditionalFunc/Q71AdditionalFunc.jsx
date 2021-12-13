@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { prices } from '../../helpers/prices';
 // Components
 import SingleCheckBtn from "../SingleCheckBtn/SingleCheckBtn";
 // Styles
-import "./Q71AdditionalFunc.scss";
+import "./Q71AdditionalFunc.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,10 +14,12 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
+
+
   return (
     <motion.div
-      className="q71-additional-func"
-      variants={pageAnimation}
+      className="q71-additional-func page"
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -31,136 +34,120 @@ const Q71AdditionalFunc = ({ storePrices, setStorePrices }) => {
 
       <div className="many-products-add">
         <ul className="ks-cboxtags">
-          <li>
+          <li style={ storePrices['Q71 Related products'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
-              price={195}
-              name={"Q71 Related products"}
-              label={"Related products +£195"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
+              price={ prices.Q71_Related_products }
+              name={ "Q71 Related products" }
+              label={ "Related products - £340+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
+
+            />
+
+          </li>
+          <li style={ storePrices['Q71 Live support chat'] ? { opacity: '50%' } : { opacity: '100%' } }>
+            <SingleCheckBtn
+              price={ prices.Q71_Live_support_chat }
+              name={ "Q71 Live support chat" }
+              label={ "Live support chat - £255+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
             />
           </li>
-          <li>
+          <li style={ storePrices['Q71 Loyalty programme'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
-              price={130}
-              name={"Q71 Gift Wrapping"}
-              label={"Gift wrapping +£130"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
+              price={ prices.Q71_Loyalty_programme }
+              name={ "Q71 Loyalty programme" }
+              label={ "Loyalty programme - £680+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
+            />
+          </li>
+          <li style={ storePrices['Q71 Wishlist'] ? { opacity: '50%' } : { opacity: '100%' } }>
+            <SingleCheckBtn
+              price={ prices.Q71_Wishlist }
+              name={ "Q71 Wishlist" }
+              label={ "Wishlist - £510+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
+            />
+          </li>
+          <li style={ storePrices['Q71 Product reviews'] ? { opacity: '50%' } : { opacity: '100%' } }>
+            <SingleCheckBtn
+              price={ prices.Q71_Product_reviews }
+              name={ "Q71 Product reviews" }
+              label={ "Product reviews - £340+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
+            />
+          </li>
+          <li style={ storePrices['Q71 Custom size guide'] ? { opacity: '50%' } : { opacity: '100%' } }>
+            <SingleCheckBtn
+              price={ prices.Q71_Custom_size_guide }
+              name={ "Q71 Custom size guide" }
+              label={ "Custom size guide - £260+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
+            />
+          </li>
+          <li style={ storePrices['Q71 Advanced Product filtering'] ? { opacity: '50%' } : { opacity: '100%' } }>
+            <SingleCheckBtn
+              price={ prices.Q71_Product_filtering }
+              name={ "Q71 Advanced Product filtering" }
+              label={ "Advanced Product filtering - £510+vat" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
+            />
+          </li>
+          <li style={ storePrices['Q71 Subscription model'] ? { opacity: '50%' } : { opacity: '100%' } }>
+            <SingleCheckBtn
+              price={ prices.Q71_Subscription_service }
+              name={ "Q71 Subscription model" }
+              label={ "Subscription model - £poa" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
             />
           </li>
 
-          <li>
+
+          <li style={ storePrices['Q71 Subscription Flow'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
-              price={130}
-              name={"Q71 Live support chat"}
-              label={"Live support chat +£130"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
-          <li>
-            <SingleCheckBtn
-              price={480}
-              name={"Q71 Loyalty programme"}
-              label={"Loyalty programme +£480"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
-          <li>
-            <SingleCheckBtn
-              price={390}
-              name={"Q71 Wishlist"}
-              label={"Wishlist +£390"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
-          <li>
-            <SingleCheckBtn
-              price={260}
-              name={"Q71 Currency converter"}
-              label={"Currency converter +£260"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
-          <li>
-            <SingleCheckBtn
-              price={260}
-              name={"Q71 Product reviews"}
-              label={"Product reviews +£260"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
+              price={ prices.Q71_Subscription_Flow }
+              name={ "Q71 Subscription Flow" }
+              label={ "Subscription Flow - £poa" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
             />
           </li>
 
-          <li>
+          <li style={ storePrices['Q71 Marketplace'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
-              price={260}
-              name={"Q71 Pre-order"}
-              label={"Pre-order +£260"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
+              price={ prices.Q71_Marketplace }
+              name={ "Q71 Marketplace" }
+              label={ "Marketplace - £poa" }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
             />
           </li>
 
-          <li>
+          <li style={ storePrices['Q71 Other features'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
-              price={195}
-              name={"Q71 Newsletter sign-up"}
-              label={"Newsletter sign-up +£195"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
+              price={ prices.Q71_Other_features }
+              name={ "Q71 Other features" }
+              label={ "Other features not listed." }
+              storePrices={ storePrices }
+              setStorePrices={ setStorePrices }
             />
           </li>
 
-          <li>
-            <SingleCheckBtn
-              price={480}
-              name={"Q71 Customisable product"}
-              label={"Customisable product +£480"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
 
-          <li>
-            <SingleCheckBtn
-              price={260}
-              name={"Q71 Custom size guide"}
-              label={"Custom size guide +£260"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
 
-          <li>
-            <SingleCheckBtn
-              price={390}
-              name={"Q71 Product filtering"}
-              label={"Product filtering +£390"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
-
-          <li>
-            <SingleCheckBtn
-              price={480}
-              name={"Q71 Subscription service"}
-              label={"Subscription service +£480"}
-              storePrices={storePrices}
-              setStorePrices={setStorePrices}
-            />
-          </li>
         </ul>
       </div>
 
       <Link to="/contacts-and-details">
-        <Button onClick={forwardAnime}>
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+        <Button onClick={ forwardAnime }>
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           Next step
         </Button>
       </Link>

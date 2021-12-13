@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { Redirect } from 'react-router-dom'
 // Styles
-import "./Q8ContactsAndDetails.scss";
+import "./Q8ContactsAndDetails.css";
 import { QuestionTitle } from "../../globalStyling";
 // Animations
 import { motion } from "framer-motion";
@@ -14,16 +14,40 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   const [isSent, setIsSent] = useState(undefined);
 
   // Client choices | passed to the hiddne input field
-  let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join(" || ");
+  let clientPreferences =
+    Object.keys(storePrices)
+      .map(key => `${key}=${storePrices[key]}`)
+      .join('<br>');
 
+  // testing
 
+  let testObject = {
+    "paragraphs": []
+  }
+
+  // iterate object and push to testObject
+  Object.keys(storePrices).forEach(key => {
+    testObject.paragraphs.push(`${key}=${storePrices[key]} \r\n`)
+  })
+
+  console.log(testObject.paragraphs);
+  // console.log(storePrices);
+  // console.log(clientPreferences);
+
+  // END testing
 
   // Initiating the contact form || https://www.emailjs.com/
-  let serviceEmailJs = "service_lmvx9rq";
-  let templateEmailJs = "template_m709w7r";
-  let userIdEmailJs = "user_t00SWW3rzOZdhMddvrdir";
 
-  function sendEmail(e) {
+  // let serviceEmailJs = "service_lmvx9rq";
+  let serviceEmailJs = 'service_lvq1l0v';
+
+  // let templateEmailJs = "template_m709w7r";
+  let templateEmailJs = 'template_z5yn83t';
+
+  // let userIdEmailJs = "user_t00SWW3rzOZdhMddvrdir";
+  let userIdEmailJs = 'user_Q3E8qwuyQdkc3P6iQvNwh';
+
+  function sendEmail (e) {
     e.preventDefault();
 
     setIsSent(true)
@@ -33,8 +57,6 @@ const Q8ContactAndDetails = ({ storePrices }) => {
         .sendForm(serviceEmailJs, templateEmailJs, e.target, userIdEmailJs)
         .then(
           (result) => {
-            console.log(result.text);
-            console.log('msg sent');
             setIsSent(undefined);
 
           },
@@ -50,8 +72,8 @@ const Q8ContactAndDetails = ({ storePrices }) => {
 
   return (
     <motion.div
-      className="contacts-and-details"
-      variants={pageAnimation}
+      className="contacts-and-details page"
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -59,19 +81,19 @@ const Q8ContactAndDetails = ({ storePrices }) => {
 
 
 
-      {!isSent ? (
+      { !isSent ? (
         <div className="forms-container">
 
 
-          <form className="contact-form" onSubmit={sendEmail}>
+          <form className="contact-form" onSubmit={ sendEmail }>
             <QuestionTitle>
               Help us to provide you with a more accurate estimate.
-         </QuestionTitle>
+            </QuestionTitle>
             <p>
               Write us a simple site brief and list out any special requiremenents
               that haven't yet been covered.
-         </p>
-            {/* Textarea */}
+            </p>
+            {/* Textarea */ }
             <textarea
               className="contact-message"
               placeholder="Message"
@@ -81,19 +103,20 @@ const Q8ContactAndDetails = ({ storePrices }) => {
             />
             <QuestionTitle>
               Please provide us with some information about you?
-         </QuestionTitle>
+            </QuestionTitle>
             <div className="contact-first-row">
-              {/* Client preferences passed to the form */}
-              <input type="hidden" name="clientPreferences" value={clientPreferences} />
+              {/* Client preferences passed to the form */ }
+              {/* <input type="hidden" name="clientPreferences" value={ clientPreferences } /> */ }
+              <input type="hidden" name="paragraphs" value={ testObject.paragraphs } />
 
-              {/* Name */}
+              {/* Name */ }
               <input
                 className="contact-name"
                 type="text"
                 placeholder="Name"
                 name="name"
               />
-              {/* Email Address */}
+              {/* Email Address */ }
               <input
                 className="contact-email"
                 type="email"
@@ -103,14 +126,14 @@ const Q8ContactAndDetails = ({ storePrices }) => {
             </div>
 
             <div className="contact-second-row">
-              {/* Phone Number */}
+              {/* Phone Number */ }
               <input
                 className="telephone-number"
                 type="text"
                 placeholder="Telephone Number"
                 name="phone"
               />
-              {/* Country */}
+              {/* Country */ }
               <input
                 className="contact-country"
                 type="text"
@@ -118,7 +141,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
                 name="country"
               />
 
-              {/* Coupon Code */}
+              {/* Coupon Code */ }
               <input
                 className="contact-coupon"
                 type="text"
@@ -127,21 +150,23 @@ const Q8ContactAndDetails = ({ storePrices }) => {
               />
             </div>
 
-            <input
+            <button
               className="contact-submit"
               type="submit"
               value="Send"
-            />
+            >
+              Send
+            </button>
           </form>
         </div>
       ) : (
-          <LoadingSpinner />
-        )}
+        <LoadingSpinner />
+      ) }
 
 
-      {isSent && (
+      { isSent && (
         <Redirect to='/thankyou' />
-      )}
+      ) }
 
 
 

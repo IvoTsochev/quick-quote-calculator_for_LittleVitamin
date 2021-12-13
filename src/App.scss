@@ -6,44 +6,42 @@
 }
 
 @font-face {
-  font-family: 'Visby-light';
-  src: url(./Fonts/VisbyCF-Light.woff) format('woff');
+  font-family: "Visby-light";
+  src: url(./Fonts/VisbyCF-Light.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Visby CF';
-  src: url(./Fonts/VisbyCF-Medium.woff) format('woff');
+  font-family: "Visby CF";
+  src: url(./Fonts/VisbyCF-Medium.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Visby-bold';
-  src: url(./Fonts/VisbyCF-Bold.woff) format('woff');
+  font-family: "Visby-bold";
+  src: url(./Fonts/VisbyCF-Bold.woff) format("woff");
 }
 
-p, h3 {
-  font-family: 'Visby CF', sans-serif;
+p,
+h3 {
+  font-family: "Visby CF", sans-serif;
   font-size: 19px;
   font-weight: 200;
   line-height: 24px;
 }
 
 h2 {
-  font-family: 'Visby CF', sans-serif;
+  font-family: "Visby CF", sans-serif;
   font-weight: 900;
   font-size: 28px;
-  line-height: 52px;
+  line-height: 1.2em;
   text-align: left !important;
 }
 
 button {
-  font-family: 'Visby CF', sans-serif;
+  font-family: "Visby CF", sans-serif;
   font-weight: 200;
   font-size: 15px;
   line-height: 15px;
 }
-
-
-
 
 body {
   background-image: url(./img/quoteBG.jpg);
@@ -60,6 +58,18 @@ body {
   padding: none;
   width: 100%;
   z-index: 0;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 .app {
@@ -70,9 +80,9 @@ body {
   .pill-logo {
     z-index: 999;
     position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 100px;
+    top: 0%;
+    left: 1%;
+    width: 85px;
     height: auto;
   }
 
@@ -115,13 +125,239 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
   .app {
+    flex-direction: column;
+    height: 100vh;
+    .videoBg {
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+      transition: 1s opacity;
+    }
     .app-main {
       flex: 100%;
+      .page {
+        width: 80%;
+        h2 {
+          line-height: 1.2;
+        }
+      }
+      .contacts-and-details.page {
+        margin-top: 5%;
+        padding: 0 3rem;
+        width: 90%;
+        .contact-second-row {
+          flex-wrap: wrap;
+        }
+      }
     }
     .app-calc {
       flex: 0%;
+      .app-calc-stats {
+        padding: 0 3rem;
+        display: none;
+        padding-bottom: 3rem;
+        .quote {
+          width: 100%;
+          .quoteArr {
+            padding: 0.5rem;
+          }
+        }
+      }
     }
+    #showCalcArea {
+      display: block;
+    }
+  }
+  .mobile-app {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 950px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+    .videoBg {
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+      transition: 1s opacity;
+    }
+    .app-main {
+      flex: 100%;
+      .page {
+        width: 80%;
+        h2 {
+          line-height: 1.2;
+        }
+      }
+      .contacts-and-details.page {
+        margin-top: 5%;
+        padding: 0 3rem;
+        width: 90%;
+        .contact-second-row {
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .app-calc {
+      flex: 0%;
+      .app-calc-stats {
+        padding: 0 3rem;
+        display: none;
+        padding-bottom: 3rem;
+        .quote {
+          width: 100%;
+          .quoteArr {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+    #showCalcArea {
+      display: block;
+    }
+  }
+  .mobile-app {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+    .videoBg {
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+      transition: 1s opacity;
+    }
+    .app-main {
+      flex: 100%;
+      .page {
+        width: 80%;
+        h2 {
+          line-height: 1.2;
+        }
+      }
+      .contacts-and-details.page {
+        margin-top: 16%;
+        padding: 0 1rem;
+        width: 90%;
+        .contact-second-row {
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .app-calc {
+      flex: 0%;
+      .app-calc-stats {
+        padding: 0 3rem;
+        display: none;
+        padding-bottom: 3rem;
+        .quote {
+          width: 100%;
+          .quoteArr {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+    #showCalcArea {
+      display: block;
+    }
+  }
+  .mobile-app {
+    height: 183vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+    .videoBg {
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+      transition: 1s opacity;
+    }
+    .app-main {
+      flex: 100%;
+      .page {
+        h2 {
+          line-height: 1.2;
+        }
+      }
+      .contacts-and-details.page {
+        margin-top: 16%;
+        padding: 0 1rem;
+      }
+    }
+    .app-calc {
+      flex: 0%;
+      .app-calc-stats {
+        padding: 0 3rem;
+        display: none;
+        padding-bottom: 3rem;
+        margin-top: 3rem;
+        height: auto;
+        .quote {
+          width: 100%;
+          .quoteArr {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+    #showCalcArea {
+      display: block;
+    }
+  }
+  .mobile-app {
+    height: 190vh;
   }
 }

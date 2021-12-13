@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,YAAY;CACtB",
+    "sources": [
+        "SingleCheckBtn.scss"
+    ],
+    "names": [],
+    "file": "SingleCheckBtn.css"
+}

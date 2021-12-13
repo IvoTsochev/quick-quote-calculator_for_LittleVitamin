@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Helpers
+import { prices } from '../../helpers/prices'
 // Styles
-import "./Q5SellingProducts.scss";
+import "./Q5SellingProducts.css";
 import { Button, QuestionTitle } from "../../globalStyling";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
@@ -13,6 +15,9 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceSellingProducts = e.target.value;
@@ -20,9 +25,17 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
   };
   // END getting the price
 
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
+
   return (
     <motion.div
-      className="selling-products"
+      className="selling-products page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
@@ -39,11 +52,12 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
       </p>
       <Link to="/many-products">
         <Button
-          value="3500"
+          value={prices.Q5_Yes}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           Yes, I will be selling
@@ -52,11 +66,12 @@ const Q5SellingProducts = ({ storePrices, setStorePrices, name }) => {
 
       <Link to="/many-pages">
         <Button
-          value="0"
+          value={prices.Q5_No}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> Nope
         </Button>

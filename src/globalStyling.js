@@ -28,6 +28,9 @@ export const Button = styled(motion.button)`
   .btn-arrow {
     margin-right: 0.4rem;
   }
+  @media (max-width: 500px) {
+    padding: 10px 37px;
+  }
 `;
 
 export const CheckBtn = styled.button`
@@ -53,7 +56,8 @@ export const CheckBtn = styled.button`
 
 export const QuestionTitle = styled.h2`
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 28px;
+  font-weight: 900;
   &:focus {
     outline: none;
   }

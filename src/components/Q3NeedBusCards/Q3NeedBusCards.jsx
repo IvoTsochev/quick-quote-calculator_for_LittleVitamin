@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Helpers
+import { prices } from '../../helpers/prices';
 // Styles
 import { Button, QuestionTitle } from "../../globalStyling";
-import "./Q3NeedBusCards.scss";
+import "./Q3NeedBusCards.css";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 
@@ -13,6 +15,9 @@ import { pageAnimation } from "../../animation";
 import { forwardAnime } from "../../util";
 
 const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
+
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
   // getting the price
   const getPriceHandler = (e) => {
     let priceNeedBusCards = e.target.value;
@@ -20,35 +25,45 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
   };
   // END getting the price
 
+  // Delay button activity
+  useEffect(() => {
+    setTimeout(() => {
+      setIsBtnDisabled((prev) => !prev)
+    }, 1000);
+  }, [setIsBtnDisabled])
+  // END Delay button activity
+
   return (
     <motion.div
-      className="need-bus-cards"
+      className="need-bus-cards page"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
     >
       <QuestionTitle>
-        Do you need branded business cards and email signatures?
+        Are you looking to ideate a unique tone of voice, personas, and bespoke assets for your brand?
       </QuestionTitle>
       <Link to="/need-guidelines">
         <Button
-          value="750"
+          value={prices.Q3_Yes}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
           YES
         </Button>
 
         <Button
-          value="0"
+          value={prices.Q3_No}
           onClick={(e) => {
             forwardAnime();
             getPriceHandler(e);
           }}
+          disabled={isBtnDisabled}
         >
           <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
         </Button>
