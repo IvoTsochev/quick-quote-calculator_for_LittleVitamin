@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { forwardAnime } from "../../util";
 // Helpers
 import { prices } from '../../helpers/prices';
+import { trackClick } from '../../helpers/googleClickTracking.js';
+import { googlePageView } from '../../helpers/googleInitialize';
 // Styles
 import "./Q2NeedBranding.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -17,6 +19,10 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
 
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("NeedBranding")
+  }, []);
 
   // getting the price
   const getPriceHandler = (e) => {
@@ -61,6 +67,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Yes, I need branding");
           } }
           value={ prices.Q2_Yes }
           disabled={ isBtnDisabled }
@@ -76,6 +83,7 @@ const NeedBranding = ({ storePrices, setStorePrices, name }) => {
             forwardAnime();
             getPriceHandler(e);
             clearNextAnswers();
+            trackClick("click", "I dont need branding");
           } }
           value={ prices.Q2_No }
           disabled={ isBtnDisabled }

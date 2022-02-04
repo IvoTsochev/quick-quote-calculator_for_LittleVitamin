@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // Helpers
 import { prices } from '../../helpers/prices';
+import { trackClick } from '../../helpers/googleClickTracking.js';
+import { googlePageView } from '../../helpers/googleInitialize';
 // Styles
 import { Button, QuestionTitle } from "../../globalStyling";
 import "./Q3NeedBusCards.css";
@@ -17,6 +19,12 @@ import { forwardAnime } from "../../util";
 const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("NeedBusCards");
+    console.log('NeedBusCards');
+  }, []);
 
   // getting the price
   const getPriceHandler = (e) => {
@@ -36,7 +44,7 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
   return (
     <motion.div
       className="need-bus-cards page"
-      variants={pageAnimation}
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -46,26 +54,28 @@ const Q3NeedBusCards = ({ storePrices, setStorePrices, name }) => {
       </QuestionTitle>
       <Link to="/need-guidelines">
         <Button
-          value={prices.Q3_Yes}
-          onClick={(e) => {
+          value={ prices.Q3_Yes }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+            trackClick("click", "Yes - Need Bus Cards");
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           YES
         </Button>
 
         <Button
-          value={prices.Q3_No}
-          onClick={(e) => {
+          value={ prices.Q3_No }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+            trackClick("click", "No - Need Bus Cards");
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
+          <FontAwesomeIcon className="btn-arrow" icon={ faCircle } /> NO
         </Button>
       </Link>
     </motion.div>

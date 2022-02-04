@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// Helpers
+import { trackClick } from '../../helpers/googleClickTracking.js';
 // Styles
 import { CheckBtn } from "../../globalStyling";
 import "./SingleCheckBtn.css";
@@ -28,7 +30,10 @@ const SingleCheckBtn = ({
     <div className="single-check-btn">
       <CheckBtn
         // style={isClicked ? { opacity: "100%" } : { opacity: "50%" }}
-        onClick={ handleClick }
+        onClick={ () => {
+          handleClick();
+          trackClick("click", name);
+        } }
       >
         { label }
       </CheckBtn>

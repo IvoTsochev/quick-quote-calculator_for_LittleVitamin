@@ -1,6 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { Redirect } from 'react-router-dom'
+// Helpers
+import { googlePageView } from '../../helpers/googleInitialize';
+import { trackClick } from '../../helpers/googleClickTracking.js';
 // Styles
 import "./Q8ContactsAndDetails.css";
 import { QuestionTitle } from "../../globalStyling";
@@ -11,7 +14,14 @@ import { pageAnimation } from "../../animation";
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Q8ContactAndDetails = ({ storePrices }) => {
+
   const [isSent, setIsSent] = useState(undefined);
+
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("Q8ContactAndDetails")
+  }, []);
+
 
   // Client choices | passed to the hiddne input field
   let clientPreferences =
@@ -154,8 +164,11 @@ const Q8ContactAndDetails = ({ storePrices }) => {
               className="contact-submit"
               type="submit"
               value="Send"
+              onClick={ () => {
+                trackClick('click', 'ContactFormSubmit')
+              } }
             >
-              Send
+              Continue
             </button>
           </form>
         </div>

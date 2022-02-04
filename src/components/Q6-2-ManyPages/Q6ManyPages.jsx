@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Helpers
 import { prices } from '../../helpers/prices';
+import { googlePageView } from '../../helpers/googleInitialize';
+import { trackClick } from '../../helpers/googleClickTracking.js';
+
 // Styles
 import "./Q6ManyPages.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -14,6 +18,12 @@ import { forwardAnime } from "../../util";
 const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("ManyPages")
+  }, []);
 
   // getting the price
   const getPriceHandler = (e) => {
@@ -63,6 +73,7 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Premium - Many Pages");
           } }
           disabled={ isBtnDisabled }
         >
@@ -75,6 +86,7 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Advanced - Many Pages");
           } }
           disabled={ isBtnDisabled }
         >
@@ -87,6 +99,7 @@ const Q6ManyPages = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Not Sure - Many Pages");
           } }
           disabled={ isBtnDisabled }
         >

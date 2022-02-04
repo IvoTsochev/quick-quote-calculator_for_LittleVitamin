@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // Helpers
 import { prices } from '../../helpers/prices';
+import { googlePageView } from '../../helpers/googleInitialize';
+import { trackClick } from '../../helpers/googleClickTracking.js';
 // Styles
 import "./Q4NeedGuidelines.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -17,6 +19,12 @@ import { forwardAnime } from "../../util";
 const Q4NeedGuidelines = ({ storePrices, setStorePrices, name }) => {
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("NeedGuidelines")
+  }, []);
+
 
   // getting the price
   const getPriceHandler = (e) => {
@@ -36,7 +44,7 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices, name }) => {
   return (
     <motion.div
       className="need-guidelines page"
-      variants={pageAnimation}
+      variants={ pageAnimation }
       initial="hidden"
       animate="show"
       exit="exit"
@@ -44,26 +52,28 @@ const Q4NeedGuidelines = ({ storePrices, setStorePrices, name }) => {
       <QuestionTitle>Do you need a brand tool kit to share with digital, design marketing or PR agencies?</QuestionTitle>
       <Link to="/selling-products">
         <Button
-          value={prices.Q4_Yes}
-          onClick={(e) => {
+          value={ prices.Q4_Yes }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+            trackClick("click", "Yes - Need Guidelines");
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faArrowAltCircleRight} />{" "}
+          <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           YES
         </Button>
 
         <Button
-          value={prices.Q4_No}
-          onClick={(e) => {
+          value={ prices.Q4_No }
+          onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
-          }}
-          disabled={isBtnDisabled}
+            trackClick("click", "No - Need Guidelines");
+          } }
+          disabled={ isBtnDisabled }
         >
-          <FontAwesomeIcon className="btn-arrow" icon={faCircle} /> NO
+          <FontAwesomeIcon className="btn-arrow" icon={ faCircle } /> NO
         </Button>
       </Link>
     </motion.div>
