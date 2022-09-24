@@ -5,11 +5,11 @@ import { Redirect } from 'react-router-dom'
 import { googlePageView } from '../../helpers/googleInitialize';
 import { trackClick } from '../../helpers/googleClickTracking.js';
 // Styles
-import "./Q8ContactsAndDetails.css";
-import { QuestionTitle } from "../../globalStyling";
+import './Q8ContactsAndDetails.css';
+import { QuestionTitle } from '../../globalStyling';
 // Animations
-import { motion } from "framer-motion";
-import { pageAnimation } from "../../animation";
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../animation';
 // Components
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
@@ -24,43 +24,31 @@ const Q8ContactAndDetails = ({ storePrices }) => {
 
 
   // Client choices | passed to the hiddne input field
-  let clientPreferences =
-    Object.keys(storePrices)
-      .map(key => `${key}=${storePrices[key]}`)
-      .join('<br>');
-
-  // testing
+  let clientPreferences = Object.keys(storePrices)
+    .map((key) => `${key}=${storePrices[key]}`)
+    .join('<br>');
 
   let testObject = {
-    "paragraphs": []
-  }
+    paragraphs: [],
+  };
 
   // iterate object and push to testObject
-  Object.keys(storePrices).forEach(key => {
-    testObject.paragraphs.push(`${key}=${storePrices[key]} \r\n`)
-  })
-
-  console.log(testObject.paragraphs);
-  // console.log(storePrices);
-  // console.log(clientPreferences);
-
-  // END testing
+  Object.keys(storePrices).forEach((key) => {
+    testObject.paragraphs.push(`${key}=${storePrices[key]} \r\n`);
+  });
 
   // Initiating the contact form || https://www.emailjs.com/
 
-  // let serviceEmailJs = "service_lmvx9rq";
-  let serviceEmailJs = 'service_lvq1l0v';
+  let serviceEmailJs = `${process.env.REACT_APP_SERVICE_EMAIL_JS}`;
 
-  // let templateEmailJs = "template_m709w7r";
-  let templateEmailJs = 'template_z5yn83t';
+  let templateEmailJs = `${process.env.REACT_APP_TEMPLATE_EMAIL_JS}`;
 
-  // let userIdEmailJs = "user_t00SWW3rzOZdhMddvrdir";
-  let userIdEmailJs = 'user_Q3E8qwuyQdkc3P6iQvNwh';
+  let userIdEmailJs = `${process.env.REACT_APP_USERID_EMAIL_JS}`;
 
-  function sendEmail (e) {
+  function sendEmail(e) {
     e.preventDefault();
 
-    setIsSent(true)
+    setIsSent(true);
 
     setTimeout(() => {
       emailjs
@@ -68,42 +56,34 @@ const Q8ContactAndDetails = ({ storePrices }) => {
         .then(
           (result) => {
             setIsSent(undefined);
-
           },
           (error) => {
             console.log(error.text);
           }
         );
     }, 1500);
-
   }
   // END Initiating the contact form
-
 
   return (
     <motion.div
       className="contacts-and-details page"
-      variants={ pageAnimation }
+      variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
     >
-
-
-
-      { !isSent ? (
+      {!isSent ? (
         <div className="forms-container">
-
-
-          <form className="contact-form" onSubmit={ sendEmail }>
+          <form className="contact-form" onSubmit={sendEmail}>
             <QuestionTitle>
               Help us to provide you with a more accurate estimate.
             </QuestionTitle>
             <p>
-              Write us a simple site brief and list out any special requiremenents
-              that haven't yet been covered.
+              Write us a simple site brief and list out any special
+              requiremenents that haven't yet been covered.
             </p>
-            {/* Textarea */ }
+            {/* Textarea */}
             <textarea
               className="contact-message"
               placeholder="Message"
@@ -115,18 +95,22 @@ const Q8ContactAndDetails = ({ storePrices }) => {
               Please provide us with some information about you?
             </QuestionTitle>
             <div className="contact-first-row">
-              {/* Client preferences passed to the form */ }
-              {/* <input type="hidden" name="clientPreferences" value={ clientPreferences } /> */ }
-              <input type="hidden" name="paragraphs" value={ testObject.paragraphs } />
+              {/* Client preferences passed to the form */}
+              {/* <input type="hidden" name="clientPreferences" value={ clientPreferences } /> */}
+              <input
+                type="hidden"
+                name="paragraphs"
+                value={testObject.paragraphs}
+              />
 
-              {/* Name */ }
+              {/* Name */}
               <input
                 className="contact-name"
                 type="text"
                 placeholder="Name"
                 name="name"
               />
-              {/* Email Address */ }
+              {/* Email Address */}
               <input
                 className="contact-email"
                 type="email"
@@ -136,14 +120,14 @@ const Q8ContactAndDetails = ({ storePrices }) => {
             </div>
 
             <div className="contact-second-row">
-              {/* Phone Number */ }
+              {/* Phone Number */}
               <input
                 className="telephone-number"
                 type="text"
                 placeholder="Telephone Number"
                 name="phone"
               />
-              {/* Country */ }
+              {/* Country */}
               <input
                 className="contact-country"
                 type="text"
@@ -151,7 +135,7 @@ const Q8ContactAndDetails = ({ storePrices }) => {
                 name="country"
               />
 
-              {/* Coupon Code */ }
+              {/* Coupon Code */}
               <input
                 className="contact-coupon"
                 type="text"
@@ -174,15 +158,9 @@ const Q8ContactAndDetails = ({ storePrices }) => {
         </div>
       ) : (
         <LoadingSpinner />
-      ) }
+      )}
 
-
-      { isSent && (
-        <Redirect to='/thankyou' />
-      ) }
-
-
-
+      {isSent && <Redirect to="/thankyou" />}
     </motion.div>
   );
 };
