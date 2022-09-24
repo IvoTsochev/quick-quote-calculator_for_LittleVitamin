@@ -1,7 +1,9 @@
 // Utils
 // import handleCursor from './helpers/cursorStyle';
 import { useState, useEffect } from "react";
-import { Link, Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
+// Helpers
+import { initializeGoogleAnalytics } from "./helpers/googleInitialize";
 // Styles
 import "./App.css";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -28,6 +30,8 @@ import pill_logo from './img/White-Pill_Square.png';
 
 
 function App () {
+
+
   let location = useLocation();
 
 
@@ -45,6 +49,11 @@ function App () {
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
   const [storePrices, setStorePrices] = useState({});
+
+  // Google Analytics
+  useEffect(() => {
+    initializeGoogleAnalytics();
+  }, []);
 
 
   // suming the total price from storePrices object

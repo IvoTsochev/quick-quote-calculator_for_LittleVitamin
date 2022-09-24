@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // Helpers
 import { prices } from '../../helpers/prices';
+import { googlePageView } from '../../helpers/googleInitialize';
+import { trackClick } from '../../helpers/googleClickTracking.js';
+
 // Styles
 import "./Q6ManyProducts.css";
 import { Button, QuestionTitle } from "../../globalStyling";
@@ -15,6 +18,11 @@ import { forwardAnime } from "../../util";
 const ManyProducts = ({ storePrices, setStorePrices, name }) => {
 
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("ManyProducts")
+  }, []);
 
   // getting the price
   const getPriceHandler = (e) => {
@@ -50,6 +58,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Standard - Many Products");
           } }
           disabled={ isBtnDisabled }
         >
@@ -62,6 +71,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Premium - Many Products");
           } }
           disabled={ isBtnDisabled }
         >
@@ -74,6 +84,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Advanced - Many Products");
           } }
           disabled={ isBtnDisabled }
         >
@@ -86,6 +97,7 @@ const ManyProducts = ({ storePrices, setStorePrices, name }) => {
           onClick={ (e) => {
             forwardAnime();
             getPriceHandler(e);
+            trackClick("click", "Not Sure - Many Products");
           } }
           disabled={ isBtnDisabled }
         >

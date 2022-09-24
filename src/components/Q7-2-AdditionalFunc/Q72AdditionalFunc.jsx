@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 // Helpers
 import { prices } from '../../helpers/prices'
+import { googlePageView } from '../../helpers/googleInitialize';
+import { trackClick } from '../../helpers/googleClickTracking.js';
 // Components
 import SingleCheckBtn from "../SingleCheckBtn/SingleCheckBtn";
 // Styles
@@ -16,7 +18,10 @@ import { forwardAnime } from "../../util";
 
 const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
 
-
+  // Google Analytics
+  useEffect(() => {
+    googlePageView("Q72AdditionalFunc")
+  }, []);
 
 
   return (
@@ -139,7 +144,10 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
       </div>
 
       <Link to="/contacts-and-details">
-        <Button onClick={ forwardAnime }>
+        <Button onClick={ () => {
+          forwardAnime();
+          trackClick("click", "Q72 Next");
+        } }>
           <FontAwesomeIcon className="btn-arrow" icon={ faArrowAltCircleRight } />{ " " }
           Next step
         </Button>
