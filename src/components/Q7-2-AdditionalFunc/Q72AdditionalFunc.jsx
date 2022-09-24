@@ -36,7 +36,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
       </p>
       <div className="many-pages-add">
         <ul className="ks-cboxtags">
-          <li style={ storePrices['Photo gallery +£170'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Photo gallery'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Photo_gallery }
               name={ "Q72 Photo gallery" }
@@ -45,7 +45,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['Newsletter sign-up +£170'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Newsletter sign-up'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Newsletter_sign_up }
               name={ "Q72 Newsletter sign-up" }
@@ -54,7 +54,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['Video content £255'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Video content'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Video_content }
               name={ "Q72 Video content" }
@@ -63,7 +63,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['Age gate +£255'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Age gate'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Age_gate }
               name={ "Q72 Age gate" }
@@ -72,7 +72,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['File sharing +£340'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 File sharing'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_File_sharing }
               name={ "Q72 File sharing" }
@@ -81,7 +81,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['Booking schedule +£510'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Booking schedule'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Booking_schedule }
               name={ "Q72 Booking schedule" }
@@ -90,7 +90,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['Contact form +£170'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Contact form'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Contact_form }
               name={ "Q72 Contact form" }
@@ -99,7 +99,7 @@ const Q72AdditionalFunc = ({ storePrices, setStorePrices }) => {
               setStorePrices={ setStorePrices }
             />
           </li>
-          <li style={ storePrices['Social media feed +£170'] ? { opacity: '50%' } : { opacity: '100%' } }>
+          <li style={ storePrices['Q72 Social media feed'] ? { opacity: '50%' } : { opacity: '100%' } }>
             <SingleCheckBtn
               price={ prices.Q72_Social_media_feed }
               name={ "Q72 Social media feed" }

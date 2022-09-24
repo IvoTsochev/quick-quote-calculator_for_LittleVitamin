@@ -327,7 +327,7 @@ body {
   }
   .app .app-main .contacts-and-details.page {
     margin-top: 16%;
-    padding: 0 3rem;
+    padding: 0 1rem;
     width: 90%;
   }
   .app .app-main .contacts-and-details.page .contact-second-row {
@@ -395,7 +395,7 @@ body {
   }
   .app .app-main .contacts-and-details.page {
     margin-top: 16%;
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
   .app .app-calc {
     -webkit-box-flex: 0%;
@@ -419,7 +419,7 @@ body {
     display: block;
   }
   .mobile-app {
-    height: 174vh;
+    height: 190vh;
   }
 }
 /*# sourceMappingURL=App.css.map */

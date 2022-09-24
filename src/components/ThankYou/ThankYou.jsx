@@ -9,9 +9,9 @@ const ThankYou = ({ storePrices }) => {
   const [isEcommerce, setIsEcommerce] = useState(false);
 
 
-  let websiteThankYouMsg = <h2>Our consultants will be in touch shortly. As you've selected one of our bespoke design and development packages, why don't you have a look at our specialised websites portfolio? Go on <a href='https://vitamincommerce.com/portfolio'>Our Work page</a></h2>
+  let websiteThankYouMsg = <p>Our consultants will be in touch shortly. As you've selected one of our bespoke design and development packages, why don't you have a look at our specialised websites portfolio? Go on <a href='https://vitamincommerce.com/portfolio'>Our Work page</a></p>
 
-  let eCommerceThankYouMsg = <h2>Our consultants will be in touch shortly. As you've selected that you're willing to sell products online, why don't you have a look at our specialised websites portfolio? Go on <a href='https://vitamincommerce.com/portfolio'>Our Work page</a></h2>
+  let eCommerceThankYouMsg = <p>Our consultants will be in touch shortly. As you've selected that you're willing to sell products online, why don't you have a look at our specialised websites portfolio? Go on <a href='https://vitamincommerce.com/portfolio'>Our Work page</a></p>
 
 
 

@@ -1,3 +1,5 @@
+// Utils
+// import handleCursor from './helpers/cursorStyle';
 import { useState, useEffect } from "react";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 // Styles
@@ -22,10 +24,12 @@ import Q8ContactAndDetails from "./components/Q8ContactsAndDetails/Q8ContactAndD
 import Quote from "./components/Quote/Quote";
 import videoBg from "./img/LV-AN01-sonic-ident-1280x720-1.mp4";
 import ThankYou from './components/ThankYou/ThankYou';
-import pill_logo from './img/White-Pill_Square.png'
+import pill_logo from './img/White-Pill_Square.png';
+
 
 function App () {
   let location = useLocation();
+
 
   let lastPage = false;
   if (location.pathname === '/thankyou') {
@@ -41,6 +45,7 @@ function App () {
   // STATE
   const [totalPrice, setTotalPrice] = useState(0);
   const [storePrices, setStorePrices] = useState({});
+
 
   // suming the total price from storePrices object
   let sumAllArr = Object.values(storePrices);
@@ -70,7 +75,7 @@ function App () {
 
   return (
     <div className={ `app ${contactPage ? 'mobile-app' : ''}` }>
-      <a href='https://lv2.littlevitamindevelopment.com'>
+      <a href='https://vitamincommerce.com'>
         <img className='pill-logo' src={ pill_logo } alt="White-Pill_Square" />
       </a>
       <video className="videoBg" autoPlay loop muted>
@@ -81,9 +86,12 @@ function App () {
 
         <AnimatePresence exitBeforeEnter>
           <Switch location={ location } key={ location.pathname }>
+
+
             <Route path="/" exact>
               <Q1LetsStart />
             </Route>
+
 
             <Route path="/need-branding">
               <Q2NeedBranding
@@ -154,6 +162,9 @@ function App () {
             <Route path='/thankyou'>
               <ThankYou storePrices={ storePrices } />
             </Route>
+
+
+
           </Switch>
         </AnimatePresence>
       </div>

@@ -14,8 +14,27 @@ const Q8ContactAndDetails = ({ storePrices }) => {
   const [isSent, setIsSent] = useState(undefined);
 
   // Client choices | passed to the hiddne input field
-  let clientPreferences = Object.keys(storePrices).map(key => `${key}=${storePrices[key]}`).join('<br>');
+  let clientPreferences =
+    Object.keys(storePrices)
+      .map(key => `${key}=${storePrices[key]}`)
+      .join('<br>');
 
+  // testing
+
+  let testObject = {
+    "paragraphs": []
+  }
+
+  // iterate object and push to testObject
+  Object.keys(storePrices).forEach(key => {
+    testObject.paragraphs.push(`${key}=${storePrices[key]} \r\n`)
+  })
+
+  console.log(testObject.paragraphs);
+  // console.log(storePrices);
+  // console.log(clientPreferences);
+
+  // END testing
 
   // Initiating the contact form || https://www.emailjs.com/
 
@@ -38,8 +57,6 @@ const Q8ContactAndDetails = ({ storePrices }) => {
         .sendForm(serviceEmailJs, templateEmailJs, e.target, userIdEmailJs)
         .then(
           (result) => {
-            console.log(result.text);
-            console.log('msg sent');
             setIsSent(undefined);
 
           },
@@ -89,7 +106,8 @@ const Q8ContactAndDetails = ({ storePrices }) => {
             </QuestionTitle>
             <div className="contact-first-row">
               {/* Client preferences passed to the form */ }
-              <input type="hidden" name="clientPreferences" value={ clientPreferences } />
+              {/* <input type="hidden" name="clientPreferences" value={ clientPreferences } /> */ }
+              <input type="hidden" name="paragraphs" value={ testObject.paragraphs } />
 
               {/* Name */ }
               <input
@@ -132,11 +150,13 @@ const Q8ContactAndDetails = ({ storePrices }) => {
               />
             </div>
 
-            <input
+            <button
               className="contact-submit"
               type="submit"
               value="Send"
-            />
+            >
+              Send
+            </button>
           </form>
         </div>
       ) : (

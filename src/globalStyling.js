@@ -28,6 +28,9 @@ export const Button = styled(motion.button)`
   .btn-arrow {
     margin-right: 0.4rem;
   }
+  @media (max-width: 500px) {
+    padding: 10px 37px;
+  }
 `;
 
 export const CheckBtn = styled.button`
